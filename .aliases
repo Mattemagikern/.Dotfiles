@@ -1,0 +1,13 @@
+alias server='ssh mattemagikern@31.208.79.219'
+alias serverip='echo 31.208.79.219'
+
+alias o='xdg-open'
+
+alias ls='ls --color=auto'
+alias greg='grep --color=auto'
+alias la='ls -a'
+alias please='sudo $(fc -ln -1)'
+
+alias g='git'
+alias gs='git status'
+alias switch='git checkout'
