@@ -11,3 +11,5 @@ alias please='sudo $(fc -ln -1)'
 alias g='git'
 alias gs='git status'
 alias switch='git checkout'
+
+alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
