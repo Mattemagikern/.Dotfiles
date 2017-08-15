@@ -13,3 +13,6 @@ alias gs='git status'
 alias switch='git checkout'
 
 alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
+
+
+alias courses='cs ~/Documents/Courses'
