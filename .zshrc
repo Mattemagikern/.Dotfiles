@@ -1,10 +1,5 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-if [ -z "$TMUX" ]
-then
-  tmux attach -t Plugg || tmux new -s Plugg 
-fi
-
 # Path to your oh-my-zsh installation.
 export ZSH=/home/mattemagikern/.oh-my-zsh
 
