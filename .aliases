@@ -1,6 +1,8 @@
 alias server='ssh mattemagikern@31.208.79.219'
 alias serverip='echo 31.208.79.219'
 
+alias school ='ssh dic14man@login.student.lth.se'
+
 alias o='xdg-open'
 
 alias ls='ls --color=auto'
