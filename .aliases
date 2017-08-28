@@ -1,4 +1,4 @@
-alias server='ssh mattemagikern@31.208.79.219'
+alias server='ssh 31.208.79.219'
 alias serverip='echo 31.208.79.219'
 
 alias school='ssh dic14man@login.student.lth.se'
@@ -18,3 +18,8 @@ alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
 
 
 alias courses='cs ~/Documents/Courses'
+
+alias Algodat='cs ~/Documents/EDAN55'
+alias Multicore='cs ~/Documents/EDAN26'
+alias C='cs ~/Documents/EDAA25'
+

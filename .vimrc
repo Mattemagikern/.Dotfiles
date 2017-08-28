@@ -9,8 +9,11 @@ set hidden
 "---Syntax && wirting------
 syntax on
 set smartindent "A must to any programmer! "
+set autoindent
 set smartcase "Awesome! "
 set autoindent
+set showmatch
+set wrap
 colorscheme elflord
 "-----Location----
 set ruler
