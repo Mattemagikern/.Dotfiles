@@ -55,7 +55,7 @@ nnoremap , :nohl<CR>
 nmap gb :Gblame<CR>
 imap hh <Esc>
 "fast save and exit"
-map <C-x> :wq<CR>
+map <C-x> :w<CR>
 map <C-a> :q<CR>
 "quick serch, amazing for moving around in text files"
 nnoremap <space> /
@@ -71,3 +71,4 @@ let g:LanguageClient_serverCommands = {
 
 " Automatically start language servers.
 let g:LanguageClient_autoStart = 1
+set tw =79
