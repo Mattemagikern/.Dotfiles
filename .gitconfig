@@ -3,6 +3,7 @@
   name = mattemagikern
 [push]
   default = simple
+
 [color]
   diff = auto
   status = auto
@@ -10,10 +11,12 @@
   interactive = auto
   ui = true
   pager = true
+
 [color "status"]
+  branch = cyan bold
   added = blue bold 
-  changed = red bold
-  untracked = magenta bold
+  changed = White bold
+  untracked = red bold
 
 [color "branch"]
   remote = yellow
