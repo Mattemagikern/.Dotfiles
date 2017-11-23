@@ -87,3 +87,5 @@ cs() { cd "$@" && ls; }
 
 PATH=$PATH:~/Downloads/minizinc-2.1.6/bin
 export PATH
+
+autoload -Uz compinit && compinit

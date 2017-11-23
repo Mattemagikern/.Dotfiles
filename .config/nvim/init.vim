@@ -7,6 +7,7 @@ Plug 'Shougo/neosnippet-snippets'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'suan/vim-instant-markdown'
+Plug 'Shougo/echodoc.vim'
 
 Plug 'autozimu/LanguageClient-neovim',{'do': ':UpdateRemotePlugins'}
 call plug#end()
@@ -71,4 +72,5 @@ let g:LanguageClient_serverCommands = {
 
 " Automatically start language servers.
 let g:LanguageClient_autoStart = 1
-set tw =79
+set tw=78
+let g:NERDTreeWinPos = "right"
