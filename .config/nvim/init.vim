@@ -100,5 +100,5 @@ function! DefaultWorkspace()
     wincmd h
 endfunction
 command! -register DefaultWorkspace call DefaultWorkspace()
-terminal"
+"terminal"
 tnoremap hh <C-\><C-N>
