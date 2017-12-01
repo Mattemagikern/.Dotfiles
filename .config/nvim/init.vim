@@ -74,3 +74,31 @@ let g:LanguageClient_serverCommands = {
 let g:LanguageClient_autoStart = 1
 set tw=78
 let g:NERDTreeWinPos = "right"
+set clipboard=unnamedplus
+
+" Workspace Setup
+" ----------------
+function! DefaultWorkspace()
+    " Rough num columns to decide between laptop and big monitor screens
+    let numcol = 2
+    if winwidth(0) >= 220
+        let numcol = 3
+    endif
+
+    if numcol == 3
+        e term://zsh
+        file Shell\ Two
+        vnew
+    endif
+
+    vsp term://~/Programs/golang/context
+    file Context
+    sp term://zsh
+    file Shell\ One
+    wincmd k
+    resize 4
+    wincmd h
+endfunction
+command! -register DefaultWorkspace call DefaultWorkspace()
+terminal"
+tnoremap hh <C-\><C-N>
