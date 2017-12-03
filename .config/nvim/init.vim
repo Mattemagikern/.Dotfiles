@@ -5,12 +5,11 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-surround'
 Plug 'suan/vim-instant-markdown'
 Plug 'Shougo/echodoc.vim'
-
-Plug 'autozimu/LanguageClient-neovim',{'do': ':UpdateRemotePlugins'}
+Plug 'iCyMind/NeoSolarized'
 call plug#end()
+
 let g:python_host_prog = '/usr/bin/python'
 let g:python3_host_prog = '/usr/bin/python3'
 call remote#host#RegisterPlugin('python3', '~/.config/nvim/plugged/deoplete.nvim/rplugin/python3/deoplete/deoplete.py', [
@@ -28,6 +27,7 @@ set hidden
 syntax on
 let g:python_host_prog = '/usr/bin/python'
 let g:python3_host_prog = '/usr/bin/python3'
+
 set smartindent "A must to any programmer! "
 set relativenumber
 set ruler
@@ -35,17 +35,19 @@ set number
 set foldmethod=marker "{{{ to begin fold, }}} to end fold. "
 set foldclose=all
 set smartcase "Awesome! "
-set autowrite "saves after each command."
 set undofile
-set undodir=/home/mattemagikern/.nvimundo/
+set undodir=~/.nvimundo/
 set ignorecase
 set showmatch
+"---colorscheme---
+colorscheme NeoSolarized
+set background=dark
+set termguicolors
 "----- no bulk ---"
 set tabstop=2 
 set shiftwidth=2
 set expandtab
 "-----------------"
-colorscheme elflord
 "no backup files as swap"
 set nobackup
 set nowb
@@ -63,42 +65,11 @@ nnoremap <space> /
 nnoremap <c-space> ?
 
 set hidden
-
-let g:LanguageClient_serverCommands = {
-    \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
-    \ 'javascript': ['/opt/javascript-typescript-langserver/lib/language-server-stdio.js'],
-    \ 'python': ['/'],
-    \}
-
 " Automatically start language servers.
 let g:LanguageClient_autoStart = 1
 set tw=78
 let g:NERDTreeWinPos = "right"
 set clipboard=unnamedplus
 
-" Workspace Setup
-" ----------------
-function! DefaultWorkspace()
-    " Rough num columns to decide between laptop and big monitor screens
-    let numcol = 2
-    if winwidth(0) >= 220
-        let numcol = 3
-    endif
-
-    if numcol == 3
-        e term://zsh
-        file Shell\ Two
-        vnew
-    endif
-
-    vsp term://~/Programs/golang/context
-    file Context
-    sp term://zsh
-    file Shell\ One
-    wincmd k
-    resize 4
-    wincmd h
-endfunction
-command! -register DefaultWorkspace call DefaultWorkspace()
 "terminal"
 tnoremap hh <C-\><C-N>
