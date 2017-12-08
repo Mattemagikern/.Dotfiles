@@ -23,3 +23,4 @@ alias Algodat='cs ~/Documents/EDAN55'
 alias Multicore='cs ~/Documents/EDAN26'
 alias C='cs ~/Documents/EDAA25'
 alias grep='grep -rinHI --color'
+alias vim="nvim"

@@ -73,3 +73,5 @@ set clipboard=unnamedplus
 
 "terminal"
 tnoremap hh <C-\><C-N>
+
+:set inccommand=split
