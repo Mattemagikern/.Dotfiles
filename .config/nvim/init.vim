@@ -33,7 +33,6 @@ set relativenumber
 set ruler
 set number
 set foldmethod=marker "{{{ to begin fold, }}} to end fold. "
-set foldclose=all
 set smartcase "Awesome! "
 set undofile
 set undodir=~/.nvimundo/
@@ -41,11 +40,12 @@ set ignorecase
 set showmatch
 "---colorscheme---
 colorscheme NeoSolarized
-set background=dark
 set termguicolors
-"----- no bulk ---"
-set tabstop=2 
-set shiftwidth=2
+set background=dark
+hi Normal guibg=NONE ctermbg=NONE
+"----- correct indentation---"
+set tabstop=4 
+set shiftwidth=4
 set expandtab
 "-----------------"
 "no backup files as swap"
