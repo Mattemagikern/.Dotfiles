@@ -1,0 +1,17 @@
+!! Appearance
+urxvt.scrollBar: false
+URxvt*transparent: true
+URxvt*shading: 160
+URxvt*foreground: #657b83
+URxvt*background: #002b36
+URxvt*saveLines: 1000
+Xft.DPI: 180
+Xft.autohint: 0
+Xft.lcdfilter:  lcddefault
+Xft.hintstyle:  hintfull
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
+URxvt.font: xft:monaco:size=8
+urxvt.letterSpace: -1
+urxvt.font: xft:DejaVu Sans Mono:pixelsize=20
