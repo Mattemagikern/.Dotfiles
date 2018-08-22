@@ -41,7 +41,7 @@ nnoremap , :nohl<CR>
 nmap gb :Gblame<CR>
 imap hh <Esc>
 "-----Fast save and exit------"
-map <C-x> :wq<CR>
+map <C-x> :w<CR>
 map <C-a> :q<CR>
 "Quick serch, amazing for moving around in text files"
 nnoremap <space> /
@@ -49,3 +49,5 @@ nnoremap <c-space> ?
 set ignorecase
 set hlsearch
 hi Search guibg=LightBlue
+set tw=80
+colo morning
