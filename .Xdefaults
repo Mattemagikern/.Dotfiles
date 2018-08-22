@@ -1,0 +1,10 @@
+!! Appearance
+urxvt.scrollBar: false
+URxvt*shading: 175
+URxvt*saveLines: 1000
+urxvt.letterSpace: -1
+urxvt.font: xft:DejaVu Sans Mono:pixelsize=12
+
+URxvt*depth: 32
+URxvt*background: rgba:FFFF/FFFF/FFFF/B000
+URxvt.loginShell: true

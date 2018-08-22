@@ -11,7 +11,7 @@ alias gs='git status'
 alias switch='git checkout'
 
 alias grep='grep -rinHI --color=auto'
-alias vim="nvim"
+alias vi="nvim"
 
 alias courses='cs ~/Documents/Courses'
 
@@ -23,6 +23,5 @@ alias Haskell="cs ~/Documents/haskell/"
 
 alias Linus="ssh i2grp04@linus.lab.eit.lth.se"
 
-alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
-
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
