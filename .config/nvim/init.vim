@@ -1,7 +1,9 @@
+set nocompatible
+filetype off
 set encoding=utf8
-set t_Co=256
 set hidden
 syntax on
+set t_Co=256
 filetype plugin on
 
 call plug#begin()
@@ -59,7 +61,6 @@ set ignorecase
 set showmatch
 "---colorscheme---"
 "colorscheme NeoSolarized
-set termguicolors
 "colorscheme gotham
 colorscheme PaperColor
 "----- correct indentation---"
@@ -113,7 +114,3 @@ hi GitGutterAdd ctermfg=green
 hi GitGutterChange ctermfg=yellow
 hi GitGutterDelete ctermbg=red
 hi GitGutterChangeDelete ctermbg=red
-
-
-" Minimap
-let g:minimap_highlight='markdownLinkText'

@@ -18,6 +18,8 @@ set $term urxvt -e /usr/bin/env zsh
 # Your preferred application launcher
 set $menu dmenu_run
 
+font pango: System San Francisco Display 14
+hide_edge_borders both
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
@@ -180,7 +182,7 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
-
+bindsym $mod+Shift+k exec swaylock -i ~/Downloads/Superman-Logo-Wallpaper-001.jpg --scaling fill
 #
 # Status Bar:
 #
