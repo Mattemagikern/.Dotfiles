@@ -1,11 +1,14 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Path to your oh-my-zsh installation.
-export ZSH=/home/mattemagikern/.oh-my-zsh
+export ZSH=/home/m/.oh-my-zsh
 
-
+#export GDK_BACKEND=wayland
+export WLC_BG=0
 export XKB_DEFAULT_LAYOUT=se
 export XKB_DEFAULT_VARIANT=svdvorak
+export LC_CTYPE=sv_SE.UTF-8
+export EDITOR=nvim
 
 if [ $(tty)  = '/dev/tty1' ];
 then
@@ -15,7 +18,7 @@ fi
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="af-magic"
+ZSH_THEME="jbergantine"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -92,7 +95,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source $HOME/.aliases
-cs() { cd "$@" && ls; }
+cd() { builtin cd "$@" && ls; }
 
 PATH=$PATH:~/Downloads/minizinc-2.1.6/bin
 export PATH

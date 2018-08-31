@@ -14,12 +14,13 @@ Plug 'Shougo/neosnippet-snippets'
 Plug 'tpope/vim-fugitive'
 Plug 'suan/vim-instant-markdown'
 Plug 'iCyMind/NeoSolarized'
-Plug 'whatyouhide/vim-gotham'
 Plug 'NLKNguyen/papercolor-theme'
+Plug 'lervag/vimtex'
+Plug 'Yilin-Yang/vim-markbar'
 call plug#end()
 
-let g:python_host_prog = '/usr/bin/python'
-let g:python3_host_prog = '/usr/bin/python3'
+let g:python_host_prog = '/usr/bin/python2.7'
+let g:python3_host_prog = '/usr/bin/python3.7'
 call remote#host#RegisterPlugin('python3', '~/.config/nvim/plugged/deoplete.nvim/rplugin/python3/deoplete/deoplete.py', [
 		\ {'sync': 1, 'name': 'DeopleteInitializePython', 'type': 'command', 'opts': {}},
 			\ ])
@@ -30,9 +31,6 @@ inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 if !exists('g:deoplete#omni#input_patterns')
 	let g:deoplete#omni#input_patterns = {}
 endif
-let g:python_host_prog = '/usr/bin/python'
-let g:python3_host_prog = '/usr/bin/python3'
-
 
 set number                     " Enable line numbers
 set backspace=indent,eol,start " Allow backspace in Insert mode
@@ -114,3 +112,7 @@ hi GitGutterAdd ctermfg=green
 hi GitGutterChange ctermfg=yellow
 hi GitGutterDelete ctermbg=red
 hi GitGutterChangeDelete ctermbg=red
+
+map <Leader>m <Plug>ToggleMarkbar
+
+set equalprg =astyle\ --mode=c

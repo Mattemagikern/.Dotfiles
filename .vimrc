@@ -3,6 +3,7 @@ call plug#begin()
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'suan/vim-instant-markdown'
+Plug 'NLKNguyen/papercolor-theme'
 call plug#end()
 
 set hidden

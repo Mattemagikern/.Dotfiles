@@ -1,0 +1,27 @@
+# Adds spaces around operands
+--pad-oper
+# Adds space after comma
+--pad-comma
+# Adds space between (if,while,for) and (
+--pad-header
+# Removes unessisary spaces in the if case.
+--unpad-paren
+# indents the switch case.
+--indent-switches
+#deletes empty lines
+--delete-empty-lines
+#removes braces from single line if,for,while
+--remove-braces
+#converts tabs to spaces
+--convert-tabs
+#indents preprocessor blocks
+--indent-preproc-block
+# a line may max be 80 lines
+--max-code-length=80
+#pointers should be aligned to the variable name
+--align-pointer=name
+#indents should be 4 spaces
+--indent=spaces
+--indent=spaces=4
+#indent comments to the parent block.
+--indent-col1-comments

@@ -12,16 +12,8 @@ alias switch='git checkout'
 
 alias grep='grep -rinHI --color=auto'
 alias vi="nvim"
-
-alias courses='cs ~/Documents/Courses'
-
-alias Multicore='cs ~/Documents/EDAN26'
-alias neovim="cs ~/Documents/neovim/"
-alias AI="cs ~/Documents/EDAF70/"
-alias IP="cs ~/Documents/EITN30/"
-alias Haskell="cs ~/Documents/haskell/"
+alias vim="nvim"
 
 alias Linus="ssh i2grp04@linus.lab.eit.lth.se"
 
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-
