@@ -1,27 +1,68 @@
-# Adds spaces around operands
+# Adds spaces around operands:
+# Insert space padding around operators. This will also pad commas. Any end of
+# line comments will remain in the original column, if possible. Note that
+# there is no option to unpad. Once padded, they stay padded.
 --pad-oper
-# Adds space after comma
---pad-comma
-# Adds space between (if,while,for) and (
+
+#Insert space padding between a header (e.g. 'if', 'for', 'while'...) and the
+#following paren. Any end of line comments will remain in the original column,
+#if possible. This can be used with unpad-paren to remove unwanted spaces.
 --pad-header
-# Removes unessisary spaces in the if case.
---unpad-paren
-# indents the switch case.
+
+# Indent 'switch' blocks so that the 'case X:' statements are indented in the
+# switch block. The entire case block is indented
 --indent-switches
-#deletes empty lines
+
+#Delete empty lines within a function or method. Empty lines outside of
+#functions or methods are NOT deleted. If used with break-blocks or
+#break-blocks=all it will delete all lines EXCEPT the lines added by the
+#break-blocks options.
 --delete-empty-lines
-#removes braces from single line if,for,while
+
+#Pad empty lines around header blocks (e.g. 'if', 'for', 'while'...).
+--break-blocks
+
+#Remove braces from conditional statements (e.g. 'if', 'for', 'while'...). The
+#statement must be a single statement on a single line.
 --remove-braces
-#converts tabs to spaces
+
+#Converts tabs into spaces in the non-indentation part of the line. The number
+#of spaces inserted will maintain the spacing of the tab. The current setting
+#for spaces per tab is used. It may not produce the expected results if
+#convert-tabs is used when changing spaces per tab. Tabs are not replaced
+#within quotes.
 --convert-tabs
-#indents preprocessor blocks
+
+#Indent preprocessor blocks at brace level zero and immediately within a
+#namespace. There are restrictions on what will be indented. Blocks within
+#methods, classes, arrays, etc., will not be indented. Blocks containing braces
+#or multi-line define statements will not be indented. Without this option the
+#preprocessor block is not indented.
 --indent-preproc-block
-# a line may max be 80 lines
+
+#The option max‑code‑length will break a line if the code exceeds # characters.
+#The valid values are 50 thru 200. Lines without logical conditionals will
+#break on a logical conditional (||, &&, ...), comma, paren, semicolon, or
+#space.
+#Some code will not be broken, such as comments, quotes, and arrays. If used
+#with keep‑one‑line‑blocks or add-one-line-braces the blocks will NOT be broken.
+#If used with keep‑one‑line‑statements the statements will be broken at a
+#semicolon if the line goes over the maximum length. If there is no available
+#break point within the max code length, the line will be broken at the first
+#available break point after the max code length.
+#The option break‑after‑logical will cause the logical conditionals to be
+#placed last on the previous line. This option has no effect without
+#max‑code‑length.
 --max-code-length=80
-#pointers should be aligned to the variable name
+--break-after-logical
+
+#Attach a pointer or reference operator (*, &, or ^) to either the variable
+#variable name (right).The spacing between the type and name will be preserved,
+#if possible.
 --align-pointer=name
+
 #indents should be 4 spaces
---indent=spaces
 --indent=spaces=4
-#indent comments to the parent block.
+
+#This option will allow the comments to be indented with the code.
 --indent-col1-comments
