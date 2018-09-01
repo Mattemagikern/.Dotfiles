@@ -1,3 +1,8 @@
+#Linux style uses linux braces. Opening braces are broken from namespace,
+#class, and function definitions. The braces are attached to everything else,
+#including arrays, structs, enums, and statements within a function
+--style=knf
+
 # Adds spaces around operands:
 # Insert space padding around operators. This will also pad commas. Any end of
 # line comments will remain in the original column, if possible. Note that

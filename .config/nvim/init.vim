@@ -1,5 +1,5 @@
 set nocompatible
-filetype off
+filetype on
 set encoding=utf8
 set hidden
 syntax on
@@ -101,18 +101,30 @@ set inccommand=split
 set listchars=eol:¬,space:·
 "set list
 "colo evening
+au! BufRead,BufNewFile *.c,*.h,*.cpp set equalprg=astyle\ --mode=c
+inoremap <> <><Left>
+inoremap () ()<Left>
+inoremap {} {}<Left>
+inoremap [] []<Left>
+inoremap "" ""<Left>
+inoremap '' ''<Left>
+inoremap `` ``<Left>
 
-" Git Gutter"
-set signcolumn=yes
+nmap <Up>    <Nop>
+nmap <Down>  <Nop>
+nmap <Left>  <Nop>
+nmap <Right> <Nop>
 
-let g:gitgutter_sign_added = '-'
-let g:gitgutter_sign_modified = '-'
+map $ <Nop>
+map ^ <Nop>
+map { <Nop>
+map } <Nop>
 
-hi GitGutterAdd ctermfg=green
-hi GitGutterChange ctermfg=yellow
-hi GitGutterDelete ctermbg=red
-hi GitGutterChangeDelete ctermbg=red
+noremap K     {
+noremap J     }
+noremap H     ^
+noremap L     $
 
-map <Leader>m <Plug>ToggleMarkbar
+nnoremap Y y$
 
-set equalprg =astyle\ --mode=c
+nnoremap Q @q
