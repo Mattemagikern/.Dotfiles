@@ -1,0 +1,40 @@
+!! Appearance
+xft.antialias:	1
+xft.autohint:	1
+xft.hinting: 1
+URxvt.termName: rxvt-unicode-256color
+*font:    xft:DejaVu Sans Mono:autohint=true:size=12
+*boldFont:xft:DejaVu Sans Mono:autohint=true:bold:size=12
+*italicFont:xft:DejaVu Sans Mono:autohint=true:italic:size=12
+*boldItalicFont:xft:DejaVu Sans Mono:autohint=true:bold:italic:size=12
+URxvt*scrollBar: false
+URxvt*cursorUnderline: true
+URxvt*saveLines: 1000
+
+urxvt*transparent: true
+urxvt*shading: 50
+URxvt*background: 00F5/0093/002D
+URxvt*foreground: #f6ae2d
+URxvt*cursorColor:  #f6ae2d
+URxvt*cursorColor2: #f6ae2d
+*color12: #C6E2FF
+*color4:  #C6E2FF
+
+URxvt.perl-ext-common: default,matcher
+URxvt*url-select-launcher: firefox
+
+rofi.lines: 5
+rofi.eh: 2
+rofi.width: 100
+rofi.padding: 200
+rofi.fullscreen: true
+rofi.bw: 0
+rofi.separator-style: none
+rofi.hide-scrollbar: true
+
+!                  'background', 'border', 'separator'
+rofi.color-window: argb:c82d303b, #7c8389, #1d1f21
+! State:           'bg',     'fg',     'bgalt',  'hlbg',   'hlfg'
+rofi.color-normal: argb:031d1f21, #f3f4f5, argb:031d1f21, argb:031d1f21, #9575cd 
+rofi.font: System San Francisco Display 18
+rofi.show-icons: true
