@@ -14,6 +14,6 @@ alias grep='grep -rinHI --color=auto'
 alias vi="nvim"
 alias vim="nvim"
 
-alias Linus="ssh i2grp04@linus.lab.eit.lth.se"
+alias msc="cd ~/Documents/MasterThesis"
 
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
