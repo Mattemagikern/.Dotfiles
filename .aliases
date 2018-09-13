@@ -13,6 +13,7 @@ alias switch='git checkout'
 alias grep='grep -rinHI --color=auto'
 alias vi="nvim"
 alias vim="nvim"
+alias cat="bat"
 
 alias msc="cd ~/Documents/MasterThesis/code"
 

@@ -11,7 +11,7 @@ set from = "mattemagikern@gmail.com"
 set use_from = yes
 set envelope_from = yes
 
-set smtp_url = "smtp://mattemagikern@gmail.com@smtp.gmail.com:587/"
+set smtp_url = "smtps://mattemagikern@gmail.com@smtp.gmail.com/"
 set smtp_pass = "Dyrk3344"
 set imap_user = "mattemagikern@gmail.com"
 set imap_pass = "Dyrk3344"
@@ -34,9 +34,11 @@ set mail_check          = 60                   # minimum time between scans
 set sidebar_visible
 set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
 set mail_check_stats
-bind index,pager \CP sidebar-prev
 # Ctrl-Shift-P – Previous Mailbox
-bind index,pager \CN sidebar-next
+bind index,pager \CP sidebar-prev
 # Ctrl-Shift-N – Next Mailbox
-bind index,pager \CO sidebar-open
+bind index,pager \CN sidebar-next
 # Ctrl-Shift-O – Open Highlighted Mailbox
+bind index,pager \CO sidebar-open
+
+color normal default default
