@@ -3,13 +3,14 @@ xft.antialias:	1
 xft.autohint:	1
 xft.hinting: 1
 URxvt.termName: rxvt-unicode-256color
-*font:    xft:DejaVu Sans Mono:autohint=true:size=12
-*boldFont:xft:DejaVu Sans Mono:autohint=true:bold:size=12
-*italicFont:xft:DejaVu Sans Mono:autohint=true:italic:size=12
-*boldItalicFont:xft:DejaVu Sans Mono:autohint=true:bold:italic:size=12
+*font:    xft:Hack Nerd Font:autohint=true:size=12
+*boldFont:xft:Hack Nerd Font:autohint=true:bold:size=14
+*italicFont:xft:Hack Nerd Font:autohint=true:italic:size=14
+*boldItalicFont:xft:Hack Nerd Font:autohint=true:bold:italic:size=14
 URxvt*scrollBar: false
 URxvt*cursorUnderline: true
 URxvt*saveLines: 1000
+URxvt.letterSpace: 1
 
 urxvt*transparent: true
 urxvt*shading: 50
