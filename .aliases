@@ -8,6 +8,7 @@ alias la='ls -a'
 alias please='sudo $(fc -ln -1)'
 
 alias gs='git status'
+alias gd='git diff'
 alias switch='git checkout'
 
 alias grep='grep -rinHI --color=auto'
