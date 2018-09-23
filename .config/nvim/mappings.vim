@@ -13,7 +13,7 @@ nnoremap <c-space> ?
 "terminal"
 tnoremap hh <C-\><C-N>
 
-au! BufRead,BufNewFile *.c,*.h,*.cpp set equalprg=astyle\ --mode=c
+au! BufRead,BufNewFile *.c,*.h,*.cpp,*.java set equalprg=astyle\ --mode=c
 inoremap <> <><Left>
 inoremap () ()<Left>
 inoremap {} {}<Left>

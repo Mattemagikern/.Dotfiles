@@ -96,8 +96,9 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source $HOME/.aliases
 cd() { builtin cd "$@" && ls; }
-
-PATH=$PATH:~/Downloads/minizinc-2.1.6/bin
+JAVA_HOME=~/Downloads/jdk1.8.0_181
+PATH=$JAVA_HOME/bin:$PATH
 export PATH
+export JAVA_HOME
 
 autoload -Uz compinit && compinit

@@ -9,7 +9,7 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod1
+set $mod Control
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -80,7 +80,7 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+#bindsym $mod+a focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
@@ -174,5 +174,5 @@ bindsym Control+Shift+x [class="^.*"] border toggle
 for_window [class="^.*"] border pixel 1
 
 exec compton -b
-exec feh --bg-scale ~/Pictures/colors.jpg
+exec_always feh --bg-scale ~/Pictures/Wallpapers/game_of_thrones_the_sigil_of_house_lannister-1533396.jpg
 exec nm-applet

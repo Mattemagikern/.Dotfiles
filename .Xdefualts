@@ -1,3 +1,5 @@
+!!System settings
+setxkbmap se svdvorak -option ctrl:nocaps
 !! Appearance
 xft.antialias:	1
 xft.autohint:	1

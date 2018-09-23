@@ -71,3 +71,7 @@
 
 #This option will allow the comments to be indented with the code.
 --indent-col1-comments
+
+#This makes the preprocessor blocks look nice
+--indent-preproc-define
+--indent-preproc-block
