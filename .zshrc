@@ -102,3 +102,4 @@ export PATH
 export JAVA_HOME
 
 autoload -Uz compinit && compinit
+setxkbmap se svdvorak -option ctrl:nocaps

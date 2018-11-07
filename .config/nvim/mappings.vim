@@ -14,6 +14,8 @@ nnoremap <c-space> ?
 tnoremap hh <C-\><C-N>
 
 au! BufRead,BufNewFile *.c,*.h,*.cpp,*.java set equalprg=astyle\ --mode=c
+au! BufRead,BufNewFile *.tex set spell
+au! BufRead,BufNewFile *.c,*.h,*.cpp %retab!
 inoremap <> <><Left>
 inoremap () ()<Left>
 inoremap {} {}<Left>

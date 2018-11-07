@@ -5,15 +5,13 @@ filetype plugin on
 set t_Co=256
 
 set encoding=UTF-8
-set hidden
 syntax on
 
 
 set number                     " Enable line numbers
 set backspace=indent,eol,start " Allow backspace in Insert mode
-set showmode                   " Show current mode
 set autoread                   " Reload files changed outside vim
-set laststatus=2               " Always show status line
+set laststatus=0               " Never show status line
 set splitright                 " Opens vertical split right of current window
 set splitbelow                 " Opens horizontal split below current window
 
@@ -34,13 +32,12 @@ set undodir=~/.nvimundo/
 set ignorecase
 set showmatch
 "---colorscheme---"
-colorscheme PaperColor
+colorscheme PaperColor 
 
 "----- correct indentation---"
 set tabstop=4
-set softtabstop=4
 set shiftwidth=4
-set expandtab
+set noexpandtab
 
 "no backup files as swap"
 set nobackup
@@ -49,4 +46,5 @@ set noswapfile
 
 set inccommand=split
 set listchars=eol:¬,space:·,tab:▸\
+%retab!
 set list
