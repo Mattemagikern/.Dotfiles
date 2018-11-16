@@ -16,7 +16,6 @@ set autoindent
 set showmatch
 set wrap
 set lbr
-set tw=500
 colorscheme elflord
 "-----Location----
 set ruler

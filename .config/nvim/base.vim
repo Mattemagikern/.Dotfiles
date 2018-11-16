@@ -46,5 +46,4 @@ set noswapfile
 
 set inccommand=split
 set listchars=eol:¬,space:·,tab:▸\
-%retab!
 set list

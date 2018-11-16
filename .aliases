@@ -1,7 +1,11 @@
 alias school='ssh dic14man@login.student.lth.se'
 alias raspberry="ssh pi@31.208.79.219"
 
-alias o='xdg-open'
+alias o=open
+
+open(){
+	xdg-open $@ > /dev/null &
+}
 
 alias ls='ls --color=auto'
 alias la='ls -a'
