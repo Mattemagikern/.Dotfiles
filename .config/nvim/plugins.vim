@@ -2,7 +2,6 @@ call plug#begin()
 Plug 'scrooloose/nerdtree'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/neosnippet'
-Plug 'Shougo/neosnippet-snippets'
 Plug 'tpope/vim-fugitive'
 Plug 'suan/vim-instant-markdown'
 Plug 'iCyMind/NeoSolarized'
@@ -16,11 +15,12 @@ call plug#end()
 
 let g:python_host_prog = '/usr/bin/python2.7'
 let g:python3_host_prog = '/usr/bin/python3.7'
+
 call remote#host#RegisterPlugin('python3', '~/.config/nvim/plugged/deoplete.nvim/rplugin/python3/deoplete/deoplete.py', [
-		\ {'sync': 1, 'name': 'DeopleteInitializePython', 'type': 'command', 'opts': {}},
+			\ {'sync': 1, 'name': 'DeopleteInitializePython', 'type': 'command', 'opts': {}},
 			\ ])
 call deoplete#enable()
-let g:neosnippet#enable_snipmate_compatibility = 1
+
 imap <C-u>     <Plug>(neosnippet_expand_or_jump)
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 if !exists('g:deoplete#omni#input_patterns')
@@ -29,6 +29,8 @@ endif
 
 let g:NERDTreeWinPos = "right"
 let NERDTreeShowHidden=1
+
+let g:neosnippet#snippets_directory="~/.config/nvim/snippets"
 
 let s:brown = "905532"
 let s:aqua =  "3AFFDB"

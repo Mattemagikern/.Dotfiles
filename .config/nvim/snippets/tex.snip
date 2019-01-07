@@ -1,0 +1,181 @@
+snippet \documentclass
+alias   documentclass
+	\documentclass[${1}]{${2:article}}${0}
+
+
+snippet begin
+alias   \begin
+	\begin{${1:#:type}}
+		${2:TARGET}
+	\end{$1}
+
+snippet list
+alias   \begin{list} \list
+	\begin{list}
+		${1:TARGET}
+	\end{list}
+
+snippet it
+alias   item \item
+	\item ${0}
+
+snippet enume
+abbr enumerate
+alias   \begin{enumerate} \enumerate enum
+	\begin{enumerate}
+		\item ${1:TARGET}
+	\end{enumerate}
+
+snippet itemize
+abbr  \begin{itemize} ... \end{itemize}
+alias   \begin{itemize} \itemize
+	\begin{itemize}
+		\item ${1:TARGET}
+	\end{itemize}
+
+
+snippet verbatim
+abbr  \begin{verbatim} ... \end{verbatim}
+alias   \begin{verbatim} verb \verbatim
+	\begin{verbatim}
+		${1:TARGET}
+	\end{verbatim}
+
+
+
+snippet table
+alias   \begin{table} \table
+	\begin{table}[${1}]
+		\centering
+		\caption{${2}}
+		\label{${3}}
+		\begin{tabular}{${4}}
+			${5}
+		\end{tabular}
+	\end{table}
+
+snippet tabular
+alias   \begin{tabular} \tabular
+	\begin{tabular}{${1}}
+		${2:TARGET}
+	\end{tabular}
+
+
+snippet abstract
+alias   \begin{abstract} \abstract
+	\begin{abstract}
+		${1:TARGET}
+	\end{abstract}
+
+snippet align
+alias   \begin{align} \align
+	\begin{align}
+		${1:TARGET}
+	\end{align}
+
+snippet align*
+alias   \begin{align*} \align*
+	\begin{align*}
+		${1:TARGET}
+	\end{align*}
+
+snippet equation
+alias   \begin{equation} \equation
+	\begin{equation}
+		${1:TARGET}
+	\end{equation}
+
+snippet equation*
+alias   \begin{equation*} \equation*
+	\begin{equation*}
+		${1:TARGET}
+	\end{equation*}
+
+snippet center
+alias   \begin{center} \center
+	\begin{center}
+		${1:TARGET}
+	\end{center}
+
+snippet document
+alias   \begin{document} \document
+	\begin{document}
+		${1:TARGET}
+	\end{document}
+
+snippet figure
+alias   \begin{figure} \figure
+	\begin{figure}[${1}]
+		\centering
+		\includegraphics[${2:width=${3\}}]{${4}}
+		\caption{${5}}
+		\label{${6}}
+	\end{figure}
+
+
+snippet minipage
+alias   \begin{minipage} \minipage
+	\begin{minipage}
+		${1:TARGET}
+	\end{minipage}
+
+snippet quote
+alias   \begin{quote} \quote
+	\begin{quote}
+		${1:TARGET}
+	\end{quote}
+
+snippet \chapter
+alias   chapter \chapter{
+	\chapter{${1}}
+	${0:TARGET}
+
+snippet \section
+alias   section \section{
+	\section{${1}}
+	${0:TARGET}
+
+snippet \subsection
+alias   subsection \subsection{
+	\subsection{${1}}
+	${0:TARGET}
+
+snippet \subsubsection
+alias   subsubsection \subsubsection{
+	\subsubsection{${1}}
+	${0:TARGET}
+
+snippet \paragraph
+alias   paragraph \paragraph{
+	\paragraph{${1}}
+	${0:TARGET}
+
+
+snippet \frac
+alias   frac \frac{
+	\frac{${1}}{${2}}${0}
+
+
+snippet \textbf
+alias   textbf \textbf{
+	\textbf{${1:TARGET}}${0}
+
+snippet \textit
+alias   textit \textit{
+	\textit{${1:TARGET}}${0}
+
+snippet cite
+alias   \cite
+	\cite{${1}}${0}
+
+snippet usepackage
+alias   \usepackage
+	\usepackage${1:[${2\}]}{${3}}
+
+snippet ref
+alias   \ref
+	\ref{${1}}${0}
+
+snippet label
+alias   \label
+	\label{${1}}${0}
