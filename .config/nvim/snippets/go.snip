@@ -17,28 +17,29 @@ snippet     func
 abbr        func ...() { ... }
 alias fn
 options     head
-  func ${1:fname}(${2}) ${3:int }{
-    ${0:TARGET:return }
+  func ${1}(${2}) ${3}{
+    ${0:TARGET}
   }
 
 snippet     import
 alias im
 options     head
   import (
-    "${1:fmt}"
+    "fmt"
+    ${1}
   )
   ${0:TARGET}
 
 snippet     package
 alias pk
 options     head
-  package ${1:main}
+  package ${1}
   ${0:TARGET}
 
 snippet     printf
 alias pf
 options     head
-  fmt.Printf("${1}\n"${2:})
+  fmt.Printf("${1}\n"${2})
 
 snippet     println
 alias pl
@@ -68,29 +69,21 @@ options     head
 snippet     range
 abbr        for range
 options     head
-  for ${1:v} := range ${2:#:iterator} {
+  for ${1} := range ${2} {
     ${0:TARGET}
   }
 
 snippet     if
 options     head
-    if ${1:#:condition} {
+    if ${1} {
       ${0:TARGET}
     }
-
-snippet     iferr
-alias       ife
-options     head
-    if err != nil {
-      return `g:NeosnippetSnippets_Goiferr()`
-    }
-    ${2}
 
 snippet     switch
 abbr        switch {}
 options     head
-  switch ${1:#:v} {
-  case ${2:#:condition}:
+  switch ${1} {
+  case ${2}:
     ${0:TARGET}
   }
 
@@ -98,11 +91,11 @@ snippet     select
 abbr        select {}
 options     head
   select {
-  case ${1:#:condition}:
+  case ${1}:
     ${0:TARGET}
   }
 
 snippet     case
 options     head
-  case ${1:#:condition}:
+  case ${1}:
     ${2:TARGET}
