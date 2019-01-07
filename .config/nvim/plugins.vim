@@ -11,6 +11,7 @@ Plug 'lervag/vimtex'
 Plug 'Yilin-Yang/vim-markbar'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'godlygeek/tabular'
 call plug#end()
 
 let g:python_host_prog = '/usr/bin/python2.7'

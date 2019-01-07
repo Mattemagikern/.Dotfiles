@@ -20,7 +20,7 @@ alias vi="nvim"
 alias vim="nvim"
 alias cat="bat"
 
-alias msc="cd ~/Documents/MasterThesis/code"
+alias msc="cd ~/Documents/MasterThesis/Report"
 
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias server='ssh johan@217.210.198.32'

@@ -47,3 +47,4 @@ set noswapfile
 set inccommand=split
 set listchars=eol:¬,space:·,tab:▸\
 set list
+set clipboard=unnamed
