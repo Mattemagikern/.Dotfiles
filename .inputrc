@@ -1,0 +1,2 @@
+"\C-D":kill-line
+set completion-ignore-case On
