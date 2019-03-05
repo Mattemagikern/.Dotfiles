@@ -1,6 +1,18 @@
+red="$(tput setaf 1)"
+green="$(tput setaf 2)"
+yellow="$(tput setaf 3)"
+blue="$(tput setaf 4)"
+purple="$(tput setaf 5)"
+cyan="$(tput setaf 6)"
+white="$(tput setaf 7)"
+
+bold="$(tput bold)"
+underline="$(tput smul)"
+reset="$(tput sgr0)"
+
 parse_git_branch() {
-     branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
-     [[ -z "$branch" ]] || echo "($branch)"
+     local branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
+     [[ -z "$branch" ]] || echo -e "\001${cyan}${bold}\002(${branch})\001${reset}\002"
 }
 
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
@@ -26,4 +38,5 @@ stty sane
 
 setxkbmap se svdvorak
 source ~/.aliases
-export PS1='\[\033[38;5;14m\]\u\[\033[38;5;15m\] @ \w\[\033[38;5;15m\]$(parse_git_branch) \[\033[38;5;14m\]> $(tput sgr0)'
+
+export PS1='\[$reset$white\][\W]\[$reset\]$(parse_git_branch) \[$red\]> \[$reset\]'
