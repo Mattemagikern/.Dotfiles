@@ -13,17 +13,36 @@ URxvt*cursorUnderline: true
 URxvt*saveLines: 1000
 URxvt.letterSpace: 1
 
-urxvt*transparent: true
-urxvt*shading: 50
-URxvt*background: 00F5/0093/002D
-URxvt*foreground: #f6ae2d
-URxvt*cursorColor:  #f6ae2d
-URxvt*cursorColor2: #f6ae2d
-*color12: #C6E2FF
-*color4:  #C6E2FF
-
-URxvt.perl-ext-common: default,matcher
-URxvt*url-select-launcher: firefox
+rxvt*transparent: true
+rxvt*shading: 50
+rxvt*background: 00F5/0093/002D
+rxvt*foreground: #f6ae2d
+rxvt*cursorColor:  #f6ae2d
+rxvt*cursorColor2: #f6ae2d
+! black
+rxvt*color0  : #000000
+rxvt*color8  : #000000
+! red
+rxvt*color1  : #CC0000
+rxvt*color9  : #EF2929
+! green
+rxvt*color2  : #4E9A06
+rxvt*color10 : #8AE234
+! yellow
+rxvt*color3  : #C4A000
+rxvt*color11 : #FCE94F
+! blue
+rxvt*color4  : #3465A4
+rxvt*color12 : #729FCF
+! magenta
+rxvt*color5  : #75507B
+rxvt*color13 : #AD7FA8
+! cyan
+rxvt*color6  : #06989A
+rxvt*color14 : #34E2E2
+! white
+rxvt*color7  : #FFFFFF
+rxvt*color15 : #FFFFFF
 
 rofi.lines: 5
 rofi.eh: 2

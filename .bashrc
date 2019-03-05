@@ -33,10 +33,10 @@ export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
 export PATH=$PATH:$(go env GOPATH)/bin
 
+source ~/.aliases
+
 cd() { builtin cd "$@" && ls; }
 stty sane
-
 setxkbmap se svdvorak
-source ~/.aliases
 
 export PS1='\[$reset$white\][\W]\[$reset\]$(parse_git_branch) \[$red\]> \[$reset\]'
