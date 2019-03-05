@@ -11,6 +11,7 @@ Plug 'Yilin-Yang/vim-markbar'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'godlygeek/tabular'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 call plug#end()
 
 let g:python_host_prog = '/usr/bin/python2.7'
@@ -21,8 +22,10 @@ call remote#host#RegisterPlugin('python3', '~/.config/nvim/plugged/deoplete.nvim
 			\ ])
 call deoplete#enable()
 
-imap <C-u>     <Plug>(neosnippet_expand_or_jump)
+let g:neosnippet#snippets_directory="~/.config/nvim/snippets"
+let g:neosnippet#disable_runtime_snippets = { "_": 1, }
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+imap <C-u>     <Plug>(neosnippet_expand_or_jump)
 if !exists('g:deoplete#omni#input_patterns')
 	let g:deoplete#omni#input_patterns = {}
 endif
@@ -30,7 +33,6 @@ endif
 let g:NERDTreeWinPos = "right"
 let NERDTreeShowHidden=1
 
-let g:neosnippet#snippets_directory="~/.config/nvim/snippets"
 
 let s:brown = "905532"
 let s:aqua =  "3AFFDB"

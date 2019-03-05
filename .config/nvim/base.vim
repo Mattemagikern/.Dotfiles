@@ -1,6 +1,9 @@
 set nocompatible
 filetype on
 filetype plugin on
+set rtp+=$GOROOT/misc/vim
+filetype plugin indent on
+syntax on
 
 set t_Co=256
 
@@ -47,4 +50,5 @@ set noswapfile
 set inccommand=split
 set listchars=eol:¬,space:·,tab:▸\
 set list
-set clipboard=unnamed
+set clipboard=unnamedplus
+set autoread

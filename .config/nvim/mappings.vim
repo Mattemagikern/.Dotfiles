@@ -15,8 +15,9 @@ tnoremap hh <C-\><C-N>
 
 au! BufRead,BufNewFile *.c,*.h,*.cpp,*.java set equalprg=astyle\ --mode=c
 au! BufRead,BufNewFile *.tex set spell
-au! BufRead,BufNewFile *.tex set spell
+au! BufRead,BufNewFile *.c,*.h,*.go,*py :AddTabularPattern space /.=
 au! BufWritePre *.tex if &modified | call jobstart('make') | endif
+
 inoremap <> <><Left>
 inoremap () ()<Left>
 inoremap {} {}<Left>

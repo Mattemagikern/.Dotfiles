@@ -15,11 +15,13 @@ alias gs='git status'
 alias gd='git diff'
 alias switch='git checkout'
 
-alias grep='grep -rinHI --color=auto'
+alias grep='grep --color=auto'
 alias vi="nvim"
 alias vim="nvim"
-alias cat="bat"
+alias less="nvim -R"
 
+alias blackpi="ssh pi@192.168.0.30"
+alias whitepi="ssh pi@192.168.0.29"
 alias msc="cd ~/Documents/MasterThesis/Report"
 
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
