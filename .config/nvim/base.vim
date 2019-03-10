@@ -25,7 +25,6 @@ set autoindent
 set smartindent
 set smarttab
 set linebreak
-set textwidth=80
 
 set smartcase "Awesome! "
 set foldmethod=marker "{{{ to begin fold, }}} to end fold. "

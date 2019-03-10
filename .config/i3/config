@@ -175,5 +175,5 @@ bindsym Mod1+Shift+x [class="^.*"] border toggle
 for_window [class="^.*"] border pixel 1
 
 exec_always compton -b
-exec_always feh --bg-scale ~/Pictures/Balthazar.jpg
+exec_always feh --bg-scale ~/Pictures/Leaves.jpg
 exec nm-applet

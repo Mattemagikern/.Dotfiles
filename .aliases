@@ -22,7 +22,7 @@ alias less="nvim -R"
 
 alias blackpi="ssh pi@192.168.0.30"
 alias whitepi="ssh pi@192.168.0.29"
-alias msc="cd ~/Documents/MasterThesis/Report"
+alias J="cd ~/Documents/James/src/"
 
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias server='ssh johan@217.210.198.32'

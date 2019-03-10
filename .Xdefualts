@@ -3,8 +3,8 @@
 xft.antialias:	1
 xft.autohint:	1
 xft.hinting: 1
-URxvt.termName: rxvt-unicode-256color
-*font:    xft:Hack Nerd Font:autohint=true:size=12
+rxvt.termName: rxvt-unicode-256color
+*font:    xft:Hack Nerd Font:autohint=true:size=18
 *boldFont:xft:Hack Nerd Font:autohint=true:bold:size=18
 *italicFont:xft:Hack Nerd Font:autohint=true:italic:size=18
 *boldItalicFont:xft:Hack Nerd Font:autohint=true:bold:italic:size=18
@@ -13,36 +13,35 @@ URxvt*cursorUnderline: true
 URxvt*saveLines: 1000
 URxvt.letterSpace: 1
 
-rxvt*transparent: true
-rxvt*shading: 50
-rxvt*background: 00F5/0093/002D
-rxvt*foreground: #f6ae2d
-rxvt*cursorColor:  #f6ae2d
-rxvt*cursorColor2: #f6ae2d
+URxvt*transparent: true
+URxvt*shading: 30
+URxvt*foreground: #FFFFFF
+URxvt*cursorColor:  #f6ae2d
+URxvt*cursorColor2: #f6ae2d
 ! black
-rxvt*color0  : #000000
-rxvt*color8  : #000000
+URxvt*color0  : #000000
+URxvt*color8  : #000000
 ! red
-rxvt*color1  : #CC0000
-rxvt*color9  : #EF2929
+URxvt*color1  : #CC0000
+URxvt*color9  : #EF2929
 ! green
-rxvt*color2  : #4E9A06
-rxvt*color10 : #8AE234
+URxvt*color2  : #4E9A06
+URxvt*color10 : #8AE234
 ! yellow
-rxvt*color3  : #C4A000
-rxvt*color11 : #FCE94F
+URxvt*color3  : #C4A000
+URxvt*color11 : #FCE94F
 ! blue
-rxvt*color4  : #3465A4
-rxvt*color12 : #729FCF
+URxvt*color4  : #3465A4
+URxvt*color12 : #729FCF
 ! magenta
-rxvt*color5  : #75507B
-rxvt*color13 : #AD7FA8
+URxvt*color5  : #75507B
+URxvt*color13 : #AD7FA8
 ! cyan
-rxvt*color6  : #06989A
-rxvt*color14 : #34E2E2
+URxvt*color6  : #06989A
+URxvt*color14 : #34E2E2
 ! white
-rxvt*color7  : #FFFFFF
-rxvt*color15 : #FFFFFF
+URxvt*color7  : #FFFFFF
+URxvt*color15 : #FFFFFF
 
 rofi.lines: 5
 rofi.eh: 2

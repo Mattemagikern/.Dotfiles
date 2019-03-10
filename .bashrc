@@ -39,4 +39,4 @@ cd() { builtin cd "$@" && ls; }
 stty sane
 setxkbmap se svdvorak
 
-export PS1='\[$reset$white\][\W]\[$reset\]$(parse_git_branch) \[$red\]> \[$reset\]'
+export PS1='\[${reset}${white}\][\001${green}${bold}\002\W\001${reset}\002]\[${reset}\]$(parse_git_branch) \[${bold}${red}\]> \[${reset}\]'
