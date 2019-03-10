@@ -12,7 +12,7 @@ reset="$(tput sgr0)"
 
 parse_git_branch() {
      local branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
-     [[ -z "$branch" ]] || echo -e "\001${cyan}${bold}\002(${branch})\001${reset}\002"
+	 [[ -z "$branch" ]] || echo -e "(\001${cyan}${bold}\002${branch}\001${reset}\002)"
 }
 
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
@@ -38,5 +38,5 @@ source ~/.aliases
 cd() { builtin cd "$@" && ls; }
 stty sane
 setxkbmap se svdvorak
-
-export PS1='\[${reset}${white}\][\001${green}${bold}\002\W\001${reset}\002]\[${reset}\]$(parse_git_branch) \[${bold}${red}\]> \[${reset}\]'
+export PROMPT_DIRTRIM=2
+export PS1='\[${reset}${white}\][\001${green}${bold}\002\w\001${reset}\002]\[${reset}\]$(parse_git_branch) \[${bold}${red}\]> \[${reset}\]'
