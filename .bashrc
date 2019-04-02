@@ -25,9 +25,6 @@ export XKB_DEFAULT_VARIANT=svdvorak
 export LC_CTYPE=sv_SE.UTF-8
 export EDITOR=nvim
 
-export http_proxy=http://wwwproxy:3128
-export https_proxy=http://wwwproxy:3128
-export ftp_proxy=http://wwwproxy:3128
 
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
@@ -35,7 +32,7 @@ export PATH=$PATH:$(go env GOPATH)/bin
 
 source ~/.aliases
 
-cd() { builtin cd "$@" && ls; }
+cd() { builtin cd "$@" && ls ; }
 stty sane
 setxkbmap se svdvorak
 export PROMPT_DIRTRIM=2

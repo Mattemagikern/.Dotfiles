@@ -13,11 +13,10 @@ nnoremap <c-space> ?
 "terminal"
 tnoremap hh <C-\><C-N>
 
-au! BufRead,BufNewFile *.c,*.h,*.cpp,*.java set equalprg=astyle\ --mode=c
-au! BufRead *.c,*.h,*.py,*.go set tw=79
+autocmd BufRead,BufNewFile *.c,*.h,*.cpp,*.java set equalprg=astyle\ --mode=c
+autocmd BufRead *.c,*.h,*.py,*.go set tw=79
 
-au! BufRead,BufNewFile *.tex set spell
-au! BufRead,BufNewFile *.c,*.h,*.go,*py :AddTabularPattern space /.=
+au! BufRead,BufNewFile *.tex,*.md set spell
 au! BufWritePre *.tex if &modified | call jobstart('make') | endif
 
 inoremap <> <><Left>
@@ -46,3 +45,4 @@ noremap L     $
 nnoremap Y y$
 
 nnoremap Q @q
+let mapleader=" "

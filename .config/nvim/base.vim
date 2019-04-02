@@ -1,6 +1,5 @@
 set nocompatible
 filetype on
-filetype plugin on
 set rtp+=$GOROOT/misc/vim
 filetype plugin indent on
 syntax on
