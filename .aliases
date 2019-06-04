@@ -19,7 +19,6 @@ alias switch='git checkout'
 alias grep='grep --color=auto'
 alias vi="nvim"
 alias vim="nvim"
-alias less="nvim -R"
 
 alias blackpi="ssh pi@192.168.0.30"
 alias whitepi="ssh pi@192.168.0.29"
@@ -41,6 +40,6 @@ alias scu='cd ~/Documents/ubiquitous-pancake/SCU/'
 
 
 filter (){
-	grep --color -E "$(for i in "$@"; do printf "%s|" $i; done)^"
+	grep --color=always -E "$(for i in "$@"; do printf "%s|" $i; done)^" | less -r
 }
 
