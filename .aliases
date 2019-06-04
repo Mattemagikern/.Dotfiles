@@ -13,6 +13,7 @@ alias please='sudo $(fc -ln -1)'
 
 alias gs='git status'
 alias gd='git diff'
+alias gd='git commit --amend'
 alias switch='git checkout'
 
 alias grep='grep --color=auto'
@@ -26,3 +27,20 @@ alias J="cd ~/Documents/James/src/"
 
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias server='ssh johan@217.210.198.32'
+
+alias cast='ffmpeg -f x11grab -video_size 3200x1800 -framerate 25 -i $DISPLAY -c:v ffvhuff screen.mkv'
+
+
+
+
+chroot () {
+	sudo systemd-nspawn -bD $1 -E TERM=xterm
+}
+
+alias scu='cd ~/Documents/ubiquitous-pancake/SCU/'
+
+
+filter (){
+	grep --color -E "$(for i in "$@"; do printf "%s|" $i; done)^"
+}
+
