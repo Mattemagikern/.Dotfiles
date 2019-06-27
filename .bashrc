@@ -36,4 +36,18 @@ cd() { builtin cd "$@" && ls ; }
 stty sane
 setxkbmap se svdvorak
 export PROMPT_DIRTRIM=2
-export PS1='\[${reset}${white}\][\001${green}${bold}\002\w\001${reset}\002]\[${reset}\]$(parse_git_branch) \[${bold}${red}\]> \[${reset}\]'
+
+PROMPT_COMMAND=__prompt_command
+
+__prompt_command() {
+    local curr_exit="$?"
+
+    local BRed='\[\e[0;91m\]'
+    local RCol='\[\e[0m\]'
+PS1='\[${reset}${white}\][\001${green}${bold}\002\w\001${reset}\002]\[${reset}\]$(parse_git_branch)' 
+
+    if [ "$curr_exit" != 0 ]; then
+		PS1="$PS1(${BRed}$curr_exit${RCol})"
+	fi
+	PS1="$PS1 \[${bold}${red}\]> \[${reset}\]"
+}

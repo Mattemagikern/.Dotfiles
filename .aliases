@@ -13,7 +13,6 @@ alias please='sudo $(fc -ln -1)'
 
 alias gs='git status'
 alias gd='git diff'
-alias gd='git commit --amend'
 alias switch='git checkout'
 
 alias grep='grep --color=auto'
@@ -36,10 +35,22 @@ chroot () {
 	sudo systemd-nspawn -bD $1 -E TERM=xterm
 }
 
+login() {
+	sudo machinectl -E TERM=xterm shell root@$1 
+}
+
 alias scu='cd ~/Documents/ubiquitous-pancake/SCU/'
 
-
-filter (){
-	grep --color=always -E "$(for i in "$@"; do printf "%s|" $i; done)^" | less -r
+lightup (){
+	arr=("0;31" "1;36" "0;34" "0;36" "0;37" "0;32")
+	reset='\e[0m'
+	res=""
+	indx=0
+	for i in "$@"; do 
+		color=$(printf %s%s%s '\e[' ${arr[indx % ${#arr[@]}]} 'm')
+			res=$res"sed 's/$i/$(printf $color)$i$(printf $reset)/g' | "
+			((indx++))
+		done 
+	eval $res less -r
 }
 
