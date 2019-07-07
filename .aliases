@@ -32,7 +32,7 @@ alias cast='ffmpeg -f x11grab -video_size 3200x1800 -framerate 25 -i $DISPLAY -c
 
 
 chroot () {
-	sudo systemd-nspawn -bD $1 -E TERM=xterm
+	sudo systemd-nspawn -bD $1 -E TERM=xterm --bind-ro=/dev/random --bind-ro=/dev/urandom
 }
 
 login() {
@@ -54,3 +54,4 @@ lightup (){
 	eval $res less -r
 }
 
+alias lib="cd ~/Documents/tedLib/"
