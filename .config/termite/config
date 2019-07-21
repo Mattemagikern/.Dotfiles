@@ -1,0 +1,42 @@
+[colors]
+
+# special
+foreground      = #9ed1bc
+foreground_bold = #9ed1bc
+cursor          = #9ed1bc
+background      = rgba(12, 18, 15, 0.6)
+
+# black
+color0  = #141e1a
+color8  = #7edffa
+
+# red
+color1  = #1b2722
+color9  = #bbd535
+
+# green
+color2  = #293932
+color10 = #63b7cd
+
+# yellow
+color3  = #3b5148
+color11 = #63b9d1
+
+# blue
+color4  = #536f64
+color12 = #08a7ed
+
+# magenta
+color5  = #6f9485
+color13 = #69defc
+
+# cyan
+color6  = #90beac
+color14 = #b6a0e7
+
+# white
+color7  = #b8eed8
+color15 = #78b83d
+
+[options]
+font = DejaVu Sans Mono 18

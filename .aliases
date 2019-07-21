@@ -36,7 +36,7 @@ chroot () {
 }
 
 login() {
-	sudo machinectl -E TERM=xterm shell root@$1 
+	lxc-attach -n $1 -v TERM=xterm
 }
 
 alias scu='cd ~/Documents/ubiquitous-pancake/SCU/'

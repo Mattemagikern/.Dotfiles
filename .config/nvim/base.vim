@@ -33,9 +33,6 @@ set undodir=~/.nvimundo/
 set ignorecase
 set showmatch
 
-colorscheme peachpuff
-
-
 set tabstop=4
 set shiftwidth=4
 set noexpandtab

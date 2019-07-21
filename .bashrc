@@ -20,9 +20,6 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 
-export XKB_DEFAULT_LAYOUT=se
-export XKB_DEFAULT_VARIANT=svdvorak
-export LC_CTYPE=sv_SE.UTF-8
 export EDITOR=nvim
 
 
@@ -34,7 +31,6 @@ source ~/.aliases
 
 cd() { builtin cd "$@" && ls ; }
 stty sane
-setxkbmap se svdvorak
 export PROMPT_DIRTRIM=2
 
 PROMPT_COMMAND=__prompt_command
@@ -51,3 +47,5 @@ PS1='\[${reset}${white}\][\001${green}${bold}\002\w\001${reset}\002]\[${reset}\]
 	fi
 	PS1="$PS1 \[${bold}${red}\]> \[${reset}\]"
 }
+
+export playtime="$HOME/.local/share/lxc/playtime/rootfs/"
