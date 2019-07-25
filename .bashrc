@@ -40,7 +40,7 @@ __prompt_command() {
 
     local BRed='\[\e[0;91m\]'
     local RCol='\[\e[0m\]'
-PS1='\[${reset}${white}\][\001${green}${bold}\002\w\001${reset}\002]\[${reset}\]$(parse_git_branch)' 
+PS1='[\001${cyan}${bold}\002\w\001${reset}\002]\[${reset}\]$(parse_git_branch)' 
 
     if [ "$curr_exit" != 0 ]; then
 		PS1="$PS1(${BRed}$curr_exit${RCol})"
