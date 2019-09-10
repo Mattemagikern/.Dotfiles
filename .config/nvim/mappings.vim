@@ -14,6 +14,7 @@ nnoremap <c-space> ?
 tnoremap hh <C-\><C-N>
 
 autocmd BufRead,BufNewFile *.c,*.h,*.cpp,*.java set equalprg=astyle\ --mode=c
+
 autocmd BufRead *.c,*.h,*.py,*.go set tw=79
 
 au! BufRead,BufNewFile *.tex,*.md set spell
@@ -32,17 +33,10 @@ nmap <Down>  <Nop>
 nmap <Left>  <Nop>
 nmap <Right> <Nop>
 
-map $ <Nop>
-map ^ <Nop>
-map { <Nop>
-map } <Nop>
-
-noremap K     {
-noremap J     }
-noremap H     ^
-noremap L     $
-
 nnoremap Y y$
-
 nnoremap Q @q
-let mapleader=" "
+
+set wildchar=<Tab> wildmenu wildmode=full
+noremap sw :b 
+noremap e<space> :e 
+noremap <C-n> :bnext<CR>

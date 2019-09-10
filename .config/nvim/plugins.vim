@@ -16,7 +16,7 @@ Plug 'vimwiki/vimwiki'
 call plug#end()
 
 let g:python_host_prog = '/usr/bin/python2.7'
-let g:python3_host_prog = '/usr/bin/python3.7'
+let g:python3_host_prog = '/usr/bin/python3.6'
 
 call remote#host#RegisterPlugin('python3', '~/.config/nvim/plugged/deoplete.nvim/rplugin/python3/deoplete/deoplete.py', [
 			\ {'sync': 1, 'name': 'DeopleteInitializePython', 'type': 'command', 'opts': {}},
