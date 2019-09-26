@@ -25,7 +25,7 @@
 	tree = log --oneline --decorate --all --graph
 	amm = commit --amend
 [core]
-	pager = diff-so-fancy | less --tabs=4 -RFX
+	pager = colordiff | less --tabs=4 -RFX
 [color "diff-highlight"]
 	oldNormal = red bold
 	oldHighlight = red bold 52

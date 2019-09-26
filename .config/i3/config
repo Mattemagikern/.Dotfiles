@@ -158,6 +158,8 @@ mode "resize" {
 
 bindsym $mod+p mode "resize"
 
+bindsym $mod+l exec i3lock -i ~/Pictures/Torpedoes.png
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 
@@ -173,8 +175,6 @@ gaps outer 0
 
 new_window normal
 hide_edge_borders vertical
-bindsym Mod1+Shift+x [class="^.*"] border toggle
-for_window [class="^.*"] border pixel 1
 
 exec_always compton -b
-exec_always feh --bg-scale ~/Pictures/lochness.png
+exec_always feh --bg-scale ~/Pictures/Pencil.png

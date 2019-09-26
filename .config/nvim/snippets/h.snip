@@ -1,0 +1,24 @@
+## Preprocessor
+
+# #include <...>
+snippet inc
+option heads
+    #include <${1:stdio}.h>
+
+#ifndef...endif
+snippet ifndef
+option heads
+    #ifndef $1
+    #define ${1:SYMBOL} ${2:value}
+    #endif /* ifndef $1 */
+#def
+snippet def
+option heads
+    #define ${0:TARGET}
+
+# ifdef...endif
+snippet ifdef
+option heads
+    #ifdef ${1:FOO}
+        #${2}
+    #endif

@@ -1,7 +1,7 @@
 !!System settings
 !! Appearance
-URxvt.font:     xft:bitstream vera sans mono:size=18:antialias=true
-URxvt.boldFont: xft:bitstream vera sans mono:bold:size=18:antialias=true
+URxvt.font:     xft:bitstream vera sans mono:size=20:antialias=true
+URxvt.boldFont: xft:bitstream vera sans mono:bold:size=20:antialias=true
 
 URxvt*color0:  #000000 // black
 URxvt*color1:  #B40000 // red

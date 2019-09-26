@@ -2,17 +2,15 @@ call plug#begin()
 Plug 'scrooloose/nerdtree'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/neosnippet'
+
 Plug 'tpope/vim-fugitive'
+
 Plug 'suan/vim-instant-markdown'
-Plug 'iCyMind/NeoSolarized'
-Plug 'NLKNguyen/papercolor-theme'
+Plug 'vimwiki/vimwiki'
 Plug 'lervag/vimtex'
-Plug 'Yilin-Yang/vim-markbar'
-Plug 'ryanoasis/vim-devicons'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+
 Plug 'godlygeek/tabular'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'vimwiki/vimwiki'
 call plug#end()
 
 let g:python_host_prog = '/usr/bin/python2.7'
@@ -53,18 +51,6 @@ let s:lightGreen = "31B53E"
 let s:white = "FFFFFF"
 let s:rspec_red = 'FE405F'
 let s:git_orange = 'F54D27'
-
-let g:NERDTreeExtensionHighlightColor = {} " this line is needed to avoid error
-let g:NERDTreeExtensionHighlightColor['c'] = s:blue " sets the color of css files to blue
-let g:NERDTreeExtensionHighlightColor['h'] = s:purple " sets the color of css files to blue
-let g:NERDTreeExtensionHighlightColor['go'] = s:orange " sets the color of css files to blue
-let g:NERDTreeExtensionHighlightColor['py'] = s:white " sets the color of css files to blue
-
-
-let g:NERDTreeExactMatchHighlightColor = {} " this line is needed to avoid error
-let g:NERDTreeExactMatchHighlightColor['.gitignore'] = s:git_orange " sets the color for .gitignore files
-
-let g:NERDTreePatternMatchHighlightColor = {} " this line is needed to avoid error
 
 
 let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]

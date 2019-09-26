@@ -37,13 +37,16 @@ set tabstop=4
 set shiftwidth=4
 set noexpandtab
 
+set hidden
 
 set nobackup
 set nowb
 set noswapfile
 
 set inccommand=split
-"set listchars=eol:¬,space:·,tab:▸\
-"set list
+set listchars=eol:¬,space:·,tab:▸\
+set list
 set clipboard=unnamedplus
 set autoread
+
+autocmd BufRead,BufNewFile *.h set filetype=h syntax=c

@@ -23,10 +23,10 @@ fi
 export EDITOR=nvim
 
 
-export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:/usr/local/go/bin/
 export GOPATH=$HOME/go
-export PATH=$PATH:$(go env GOPATH)/bin
-export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:$(go env GOPATH)/bin/
+export PATH=$PATH:$HOME/.local/bin/
 
 source ~/.aliases
 
@@ -50,3 +50,9 @@ PS1='[\001${cyan}${bold}\002\w\001${reset}\002]\[${reset}\]$(parse_git_branch)'
 }
 
 export playtime="$HOME/.local/share/lxc/playtime/rootfs/"
+
+#Zephyr
+export ZEPHYR_TOOLCHAIN_VARIANT=gnuarmemb
+export GNUARMEMB_TOOLCHAIN_PATH=~/libs/gcc-arm-none-eabi-8-2019-q3-update/
+source ~/zephyr/zephyr/zephyr-env.sh
+

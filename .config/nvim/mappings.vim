@@ -39,4 +39,3 @@ nnoremap Q @q
 set wildchar=<Tab> wildmenu wildmode=full
 noremap sw :b 
 noremap e<space> :e 
-noremap <C-n> :bnext<CR>

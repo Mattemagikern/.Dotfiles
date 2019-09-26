@@ -6,17 +6,16 @@ snippet main
     }
 # main(void)
 snippet mainn
-option heads
     int main(void)
     {
         ${0:TARGET}
         return 0;
     }
 ##
+
 ## Preprocessor
 # #include <...>
 snippet inc
-option heads
     #include <${1:stdio}.h>
 
 snippet indef
@@ -25,15 +24,13 @@ snippet indef
     #endif /* ifndef $1 */
 
 snippet def
-option heads
     #define ${0:TARGET}
 
 # ifdef...endif
 snippet ifdef
-option heads
     #ifdef ${1:FOO}
         #${2}
-    #endif
+    #endif /* ifdef $1 */
 
 ## Control Statements
 # if
