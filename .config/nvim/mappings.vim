@@ -1,5 +1,5 @@
 "keybindings"
-nnoremap nt :NERDTree<CR>
+nnoremap nt :Vexplore!<CR>
 nnoremap , :nohl<CR>
 nmap gb :Gblame<CR>
 imap hh <Esc>
@@ -39,3 +39,4 @@ nnoremap Q @q
 set wildchar=<Tab> wildmenu wildmode=full
 noremap sw :b 
 noremap e<space> :e 
+nnoremap <C-n> :bnext<CR>

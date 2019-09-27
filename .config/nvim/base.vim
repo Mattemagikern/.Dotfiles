@@ -50,3 +50,10 @@ set clipboard=unnamedplus
 set autoread
 
 autocmd BufRead,BufNewFile *.h set filetype=h syntax=c
+
+let g:netrw_winsize = 25
+let g:netrw_banner = 0
+let g:netrw_linestyle = 3
+let g:netrw_altv = 0
+
+let g:netrw_browse_split = 4
