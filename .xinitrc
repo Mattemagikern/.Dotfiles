@@ -4,7 +4,15 @@
 xrdb -merge ~/.Xdefualts
 
 #set keyboard
-setxkbmap se svdvorak -option ctrl:nocaps
+setxkbmap se
+
+# Load external screen if any
+if xrandr | grep "^DP1 connected" ; then 
+    bash ~/.screenlayout/home.sh
+elif xrandr | grep "^DP1-1 connected" ; then
+    bash ~/.screenlayout/assa.sh
+fi
+
 
 #Start 
 if [ "$(command -v i3)" > /dev/null 2>&1 ];

@@ -60,3 +60,10 @@ wifi_configure()
 }
 
 alias mutt='neomutt'
+
+comms()
+{
+	minicom -D /dev/ttyACM0 -b 115200
+}
+
+alias workspace='cd /media/veracrypt1/'

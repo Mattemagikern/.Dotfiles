@@ -1,5 +1,5 @@
 "keybindings"
-nnoremap nt :Vexplore!<CR>
+nnoremap nt :NERDTree<CR>
 nnoremap , :nohl<CR>
 nmap gb :Gblame<CR>
 imap hh <Esc>
@@ -13,7 +13,7 @@ nnoremap <c-space> ?
 "terminal"
 tnoremap hh <C-\><C-N>
 
-autocmd BufRead,BufNewFile *.c,*.h,*.cpp,*.java set equalprg=astyle\ --mode=c
+autocmd BufRead,BufNewFile *.c,*.h set equalprg=astyle\ --mode=c
 
 autocmd BufRead *.c,*.h,*.py,*.go set tw=79
 

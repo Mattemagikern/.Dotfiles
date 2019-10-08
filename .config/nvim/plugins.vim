@@ -1,7 +1,8 @@
 call plug#begin()
-"Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/neosnippet'
+Plug 'jeetsukumaran/vim-markology'
 
 Plug 'tpope/vim-fugitive'
 
@@ -29,8 +30,8 @@ if !exists('g:deoplete#omni#input_patterns')
 	let g:deoplete#omni#input_patterns = {}
 endif
 "
-"let g:NERDTreeWinPos = "right"
-"let NERDTreeShowHidden=1
+let g:NERDTreeWinPos = "right"
+let NERDTreeShowHidden=1
 
 
 let s:brown = "905532"
