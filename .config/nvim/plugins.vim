@@ -3,6 +3,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/neosnippet'
 Plug 'jeetsukumaran/vim-markology'
+Plug 'NLKNguyen/papercolor-theme'
 
 Plug 'tpope/vim-fugitive'
 
@@ -55,3 +56,6 @@ let s:git_orange = 'F54D27'
 
 
 let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
+
+set background=light
+colo PaperColor

@@ -41,5 +41,9 @@ colo elflord " Don't know why i need to do this, something with terminal.
 colo default
 
 autocmd BufRead,BufNewFile *.h set filetype=h syntax=c
-autocmd BufWritePre *.c,*.h %s/\s\+$//e
+autocmd BufWritePre *.c,*.h,*.md %s/\s\+$//e
+set guicursor=
 
+
+au BufWinEnter * let w:m1=matchadd('Search', '\%<82v.\%>81v', -1)
+au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>81v.\+', -1)

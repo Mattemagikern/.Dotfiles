@@ -7,6 +7,7 @@ imap hh <Esc>
 map <C-x> :w<CR>
 map <C-a> :q<CR>
 "quick serch, amazing for moving around in text files"
+let mapleader="\<Space>"
 nnoremap <space> /
 nnoremap <c-space> ?
 
@@ -20,13 +21,13 @@ autocmd BufRead *.c,*.h,*.py,*.go set tw=79
 au! BufRead,BufNewFile *.tex,*.md set spell
 au! BufWritePre *.tex if &modified | call jobstart('make') | endif
 
-inoremap <> <><Left>
-inoremap () ()<Left>
-inoremap {} {}<Left>
-inoremap [] []<Left>
-inoremap "" ""<Left>
-inoremap '' ''<Left>
-inoremap `` ``<Left>
+" inoremap <> <><Left>
+" inoremap () ()<Left>
+" inoremap {} {}<Left>
+" inoremap [] []<Left>
+" inoremap "" ""<Left>
+" inoremap '' ''<Left>
+" inoremap `` ``<Left>
 
 nmap <Up>    <Nop>
 nmap <Down>  <Nop>

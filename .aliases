@@ -53,17 +53,23 @@ wifi_configure()
 {
 	if [ -z $2 ]
 	then
-		sudo sh -C `printf 'network={\nssid="$1"\nkey_mgmt=NONE\n}\n' >> /etc/wpa_supplicant/wpa_supplicant.conf`
+		sudo sh -c `printf 'network={\nssid="$1"\nkey_mgmt=NONE\n}\n' >> /etc/wpa_supplicant/wpa_supplicant.conf`
 	else
-		sudo sh -C `wpa_passphrase $1 $2 >> /etc/wpa_supplicant/wpa_supplicant.conf`
+		sudo sh -c "wpa_passphrase $1 $2 >> /etc/wpa_supplicant/wpa_supplicant.conf"
 	fi
 }
 
-alias mutt='neomutt'
-
 comms()
 {
-	minicom -D /dev/ttyACM0 -b 115200
+	sudo screen /dev/tty$1 115200
 }
 
 alias workspace='cd /media/veracrypt1/'
+
+battery(){
+        curr=$(cat /sys/class/power_supply/BAT0/charge_now)
+        full=$(cat /sys/class/power_supply/BAT0/charge_full)
+        res=$(($curr*100/$full))
+        echo "$res%"
+
+}
