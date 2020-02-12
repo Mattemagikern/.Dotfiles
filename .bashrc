@@ -52,8 +52,12 @@ export playtime="$HOME/.local/share/lxc/playtime/rootfs/"
 
 #Zephyr
 export ZEPHYR_TOOLCHAIN_VARIANT=gnuarmemb
+export ZEPHYR_SDK_INSTALL_DIR=/opt/zephyr-sdk/
 export GNUARMEMB_TOOLCHAIN_PATH=~/libs/gcc-arm-none-eabi-8-2019-q3-update/
-#source ~/zephyr/zephyr/zephyr-env.sh
-export ZEPHYR_SDK_INSTALL_DIR=/opt/zephyr-sdk
 
 export PATH=$PATH:/opt/SEGGER/JLink/
+export PATH=~/.local/bin:"$PATH"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+export HISTFILESIZE=10000
+bonsai -m "$(fortune)"

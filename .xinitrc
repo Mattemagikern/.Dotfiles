@@ -1,16 +1,16 @@
 #!/bin/sh
 
 # merge in .Xdefaults
-xrdb -merge ~/.Xdefualts
+xrdb -merge ~/.Xdefaults
 
 #set keyboard
 setxkbmap se
 
 # Load external screen if any
-if xrandr | grep "^DP1 connected" ; then 
-    bash ~/.screenlayout/home.sh
-elif xrandr | grep "^DP1-1 connected" ; then
+if xrandr | grep "^DP1-1 connected" ; then
     bash ~/.screenlayout/assa.sh
+elif xrandr | grep "^DP1 connected" ; then 
+    bash ~/.screenlayout/home.sh
 fi
 
 

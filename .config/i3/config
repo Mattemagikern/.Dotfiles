@@ -31,7 +31,7 @@ set $mod Mod1
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec --no-startup-id urxvt
+bindsym $mod+Return exec --no-startup-id alacritty
 
 # kill focused window
 bindsym $mod+Shift+aring kill
@@ -81,7 +81,7 @@ set $ws10 "10"
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
 bindsym $mod+3 workspace $ws3
-bindsym $mod+4 workspace $ws4
+bindsym $mod+4 workspace $ws4 
 bindsym $mod+5 workspace $ws5
 bindsym $mod+6 workspace $ws6
 bindsym $mod+7 workspace $ws7
@@ -151,5 +151,5 @@ gaps outer 0
 new_window normal
 hide_edge_borders vertical
 
-exec_always compton -b
-exec_always feh --bg-scale ~/Pictures/Pencil.png
+exec compton -b
+exec_always feh --bg-scale ~/Pictures/Turtle.png

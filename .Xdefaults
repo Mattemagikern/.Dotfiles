@@ -1,7 +1,7 @@
 !!System settings
 !! Appearance
-URxvt.font:     xft:bitstream vera sans mono:size=20:antialias=true
-URxvt.boldFont: xft:bitstream vera sans mono:bold:size=20:antialias=true
+URxvt.font:     xft:bitstream vera sans mono:size=14:antialias=true
+URxvt.boldFont: xft:bitstream vera sans mono:bold:size=14:antialias=true
 
 !! Colorscheme
 
@@ -52,13 +52,14 @@ xft.antialias:1
 xft.autohint:1
 xft.hinting: 1
 rxvt.termName: rxvt-unicode-256color
-URxvt*saveLines: 1024
+URxvt*saveLines: 10000
 URxvt.letterSpace: 1
 URxvt.cursorBlink: 1
 URxvt.cursorUnderline: 1
 
 URxvt*transparent: true
 URxvt*shading: 20
+urxvt.perl-ext-common: default,resize-font
 
 rofi.lines: 5
 rofi.eh: 2

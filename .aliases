@@ -61,10 +61,12 @@ wifi_configure()
 
 comms()
 {
-	sudo screen /dev/tty$1 115200
+	#sudo screen /dev/tty$1 115200
+    sudo cat /dev/tty$1 &
 }
 
 alias workspace='cd /media/veracrypt1/'
+alias backend='cd /home/void/Documents/playce/backend/'
 
 battery(){
         curr=$(cat /sys/class/power_supply/BAT0/charge_now)
@@ -72,4 +74,8 @@ battery(){
         res=$(($curr*100/$full))
         echo "$res%"
 
+}
+
+bonsai(){
+    ~/.local/bin/bonsai -T -m "$(fortune)"
 }

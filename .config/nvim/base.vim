@@ -22,8 +22,8 @@ set undodir=~/.nvimundo/
 set ignorecase
 set showmatch
 
-set tabstop=8
-set shiftwidth=8
+set tabstop=4
+set shiftwidth=4
 set expandtab
 
 set hidden
@@ -33,17 +33,23 @@ set nowb
 set noswapfile
 
 set inccommand=split
-set listchars=eol:¬,space:·,tab:▸\
-set list
+
+set listchars=space:·,tab:▸\
+set nolist
+
 set clipboard=unnamedplus
 set autoread
-colo elflord " Don't know why i need to do this, something with terminal.
-colo default
+"colo default
+set background=dark
+colorscheme PaperColor
 
 autocmd BufRead,BufNewFile *.h set filetype=h syntax=c
-autocmd BufWritePre *.c,*.h,*.md %s/\s\+$//e
+autocmd BufWritePre *.c,*.h,*.md,*.config,*.txt,*.yml %s/\s\+$//e
 set guicursor=
 
 
-au BufWinEnter * let w:m1=matchadd('Search', '\%<82v.\%>81v', -1)
-au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>81v.\+', -1)
+au BufWinEnter *.c,*.h let w:m1=matchadd('Search', '\%<82v.\%>81v', -1)
+au BufWinEnter *.c,*.h let w:m2=matchadd('ErrorMsg', '\%>81v.\+', -1)
+
+au BufRead,BufNewFile *.h,*.c set tabstop=8 shiftwidth=8 expandtab
+au BufRead,BufNewFile *.yml,*.yaml set tabstop=4 shiftwidth=4 expandtab

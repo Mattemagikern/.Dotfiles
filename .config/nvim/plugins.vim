@@ -13,6 +13,10 @@ Plug 'lervag/vimtex'
 
 Plug 'godlygeek/tabular'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
+
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 call plug#end()
 
 let g:python_host_prog = '/usr/bin/python2.7'
@@ -59,3 +63,11 @@ let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}
 
 set background=light
 colo PaperColor
+
+
+
+" fzf
+let g:fzf_nvim_statusline = 0
+let $FZF_DEFAULT_COMMAND = 'rg --files'
+nnoremap <silent> <C-f> :Files<CR>
+nnoremap <silent> <C-p> :Buffers<CR>

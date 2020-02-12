@@ -41,3 +41,4 @@ set wildchar=<Tab> wildmenu wildmode=full
 noremap sw :b 
 noremap e<space> :e 
 nnoremap <C-n> :bnext<CR>
+nnoremap <C-b> :bprev<CR>
