@@ -48,16 +48,15 @@ PS1='[\001${cyan}${bold}\002\w\001${reset}\002]\[${reset}\]$(parse_git_branch)'
 	PS1="$PS1 \[${bold}${red}\]> \[${reset}\]"
 }
 
-export playtime="$HOME/.local/share/lxc/playtime/rootfs/"
-
 #Zephyr
-export ZEPHYR_TOOLCHAIN_VARIANT=gnuarmemb
+export ZEPHYR_TOOLCHAIN_VARIANT=zephyr
 export ZEPHYR_SDK_INSTALL_DIR=/opt/zephyr-sdk/
-export GNUARMEMB_TOOLCHAIN_PATH=~/libs/gcc-arm-none-eabi-8-2019-q3-update/
 
 export PATH=$PATH:/opt/SEGGER/JLink/
-export PATH=~/.local/bin:"$PATH"
+export PATH=$PATH:~/.local/bin
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 export HISTFILESIZE=10000
-bonsai -m "$(fortune)"
+export HISTSIZE=10000
+shopt -s histappend
+#bonsai -m "$(fortune)"

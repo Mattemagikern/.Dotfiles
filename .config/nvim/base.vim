@@ -44,7 +44,7 @@ set background=dark
 colorscheme PaperColor
 
 autocmd BufRead,BufNewFile *.h set filetype=h syntax=c
-autocmd BufWritePre *.c,*.h,*.md,*.config,*.txt,*.yml %s/\s\+$//e
+autocmd BufWritePre *.c,*.h,*.md,*.config,*.txt,*.yml,*.sh %s/\s\+$//e
 set guicursor=
 
 
