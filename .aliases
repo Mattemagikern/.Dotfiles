@@ -61,8 +61,8 @@ wifi_configure()
 
 comms()
 {
-	#sudo screen /dev/tty$1 115200
-    sudo cat /dev/tty$1 &
+	sudo screen /dev/tty$1 115200
+    #sudo cat /dev/tty$1
 }
 
 alias workspace='cd /media/veracrypt1/'
@@ -79,3 +79,5 @@ battery(){
 bonsai(){
     ~/.local/bin/bonsai -T -m "$(fortune)"
 }
+
+alias mail=aerc

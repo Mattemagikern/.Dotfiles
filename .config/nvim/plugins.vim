@@ -2,25 +2,25 @@ call plug#begin()
 Plug 'scrooloose/nerdtree'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/neosnippet'
-Plug 'jeetsukumaran/vim-markology'
 Plug 'NLKNguyen/papercolor-theme'
 
 Plug 'tpope/vim-fugitive'
 
-Plug 'suan/vim-instant-markdown'
-Plug 'vimwiki/vimwiki'
-Plug 'lervag/vimtex'
-
+"Plug 'vimwiki/vimwiki'
 Plug 'godlygeek/tabular'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+
+
+Plug 'haya14busa/vim-keeppad'
+
+Plug 'gu-fan/riv.vim'
 call plug#end()
 
-let g:python_host_prog = '/usr/bin/python2.7'
-let g:python3_host_prog = '/usr/bin/python3.6'
+let g:python3_host_prog = '/bin/python3'
 
 call remote#host#RegisterPlugin('python3', '~/.config/nvim/plugged/deoplete.nvim/rplugin/python3/deoplete/deoplete.py', [
 			\ {'sync': 1, 'name': 'DeopleteInitializePython', 'type': 'command', 'opts': {}},
@@ -30,11 +30,8 @@ call deoplete#enable()
 let g:neosnippet#snippets_directory="~/.config/nvim/snippets"
 let g:neosnippet#disable_runtime_snippets = { "_": 1, }
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
-imap <C-u>     <Plug>(neosnippet_expand_or_jump)
-if !exists('g:deoplete#omni#input_patterns')
-	let g:deoplete#omni#input_patterns = {}
-endif
-"
+imap <C-u> <Plug>(neosnippet_expand_or_jump)
+
 let g:NERDTreeWinPos = "right"
 let NERDTreeShowHidden=1
 

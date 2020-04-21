@@ -5,10 +5,7 @@
 
 ## This is here so configs done via the GUI are still loaded.
 ## Remove it to not load settings done via the GUI.
-#config.load_autoconfig()
-
-#config.bind('<Tab>', 'prompt-item-focus next', mode='prompt')
-#config.bind('<Escape>', 'leave-mode', mode='insert')
+config.load_autoconfig()
 
 #chromium backend 
 c.backend = 'webengine'
@@ -21,6 +18,7 @@ config.bind('o', 'set-cmd-text -s :open -t')
 
 #editor
 config.bind('<ctrl+e>', 'open-editor', mode='insert')
+config.bind('<ctrl+n>', 'nop')
 c.editor.command = [ "alacritty","-e","nvim", "{}" ]
 
 #moving between tabs
@@ -29,6 +27,8 @@ config.bind('<ctrl+h>', 'tab-prev')
 c.tabs.position = 'right'
 c.tabs.show = 'switching'
 c.tabs.show_switching_delay = 2000
+
+c.url.start_pages = ["https://calendar.google.com/calendar/r"]
 
 #quick exit
 config.bind('<ctrl+a>', 'quit')

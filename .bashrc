@@ -53,7 +53,6 @@ export ZEPHYR_TOOLCHAIN_VARIANT=zephyr
 export ZEPHYR_SDK_INSTALL_DIR=/opt/zephyr-sdk/
 
 export PATH=$PATH:/opt/SEGGER/JLink/
-export PATH=$PATH:~/.local/bin
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 export HISTFILESIZE=10000

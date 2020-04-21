@@ -2,7 +2,7 @@ syntax on
 set t_Co=256
 
 set encoding=UTF-8
-set number                     " Enable line numbers
+set nonumber                   " Disable line numbers
 set backspace=indent,eol,start " Allow backspace in Insert mode
 set autoread                   " Reload files changed outside vim
 set laststatus=0               " Never show status line
@@ -44,7 +44,7 @@ set background=dark
 colorscheme PaperColor
 
 autocmd BufRead,BufNewFile *.h set filetype=h syntax=c
-autocmd BufWritePre *.c,*.h,*.md,*.config,*.txt,*.yml,*.sh %s/\s\+$//e
+autocmd BufWritePre *.c,*.h,*.md,*.config,*.txt,*.yml,*.sh,*.rst %s/\s\+$//e
 set guicursor=
 
 

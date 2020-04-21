@@ -18,7 +18,7 @@ autocmd BufRead,BufNewFile *.c,*.h set equalprg=astyle\ --mode=c
 
 autocmd BufRead *.c,*.h,*.py,*.go set tw=79
 
-au! BufRead,BufNewFile *.tex,*.md set spell
+au! BufRead,BufNewFile *.tex,*.md, *.rst set spell
 au! BufWritePre *.tex if &modified | call jobstart('make') | endif
 
 " inoremap <> <><Left>
@@ -36,6 +36,8 @@ nmap <Right> <Nop>
 
 nnoremap Y y$
 nnoremap Q @q
+
+nnoremap <leader>w :e ~/Wiki/index.rst <CR>
 
 set wildchar=<Tab> wildmenu wildmode=full
 noremap sw :b 
