@@ -21,7 +21,6 @@ fi
 
 export EDITOR=nvim
 
-
 export PATH=$PATH:/usr/local/go/bin/
 export GOPATH=$HOME/go
 export PATH=$PATH:$(go env GOPATH)/bin/
@@ -48,14 +47,7 @@ PS1='[\001${cyan}${bold}\002\w\001${reset}\002]\[${reset}\]$(parse_git_branch)'
 	PS1="$PS1 \[${bold}${red}\]> \[${reset}\]"
 }
 
-#Zephyr
-export ZEPHYR_TOOLCHAIN_VARIANT=zephyr
-export ZEPHYR_SDK_INSTALL_DIR=/opt/zephyr-sdk/
-
-export PATH=$PATH:/opt/SEGGER/JLink/
-
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 export HISTFILESIZE=10000
 export HISTSIZE=10000
 shopt -s histappend
-#bonsai -m "$(fortune)"

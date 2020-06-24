@@ -3,6 +3,10 @@ alias raspberry="ssh pi@31.208.79.219"
 
 alias o=open
 
+follow(){
+    tail -f /var/log/socklog/$1/current
+}
+
 open(){
 	xdg-open $@ > /dev/null &
 }
@@ -23,7 +27,7 @@ alias blackpi="ssh pi@192.168.0.30"
 alias whitepi="ssh pi@192.168.0.29"
 alias J="cd ~/Documents/James/src/"
 
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias cfg='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias server='ssh johan@217.210.198.32'
 
 alias cast='ffmpeg -f x11grab -video_size 3200x1800 -framerate 25 -i $DISPLAY -c:v ffvhuff screen.mkv'
@@ -69,11 +73,7 @@ alias workspace='cd /media/veracrypt1/'
 alias backend='cd /home/void/Documents/playce/backend/'
 
 battery(){
-        curr=$(cat /sys/class/power_supply/BAT0/charge_now)
-        full=$(cat /sys/class/power_supply/BAT0/charge_full)
-        res=$(($curr*100/$full))
-        echo "$res%"
-
+    cat /sys/class/power_supply/BAT0/capacity
 }
 
 bonsai(){

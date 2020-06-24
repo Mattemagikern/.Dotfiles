@@ -4,7 +4,7 @@
 xrdb -merge ~/.Xdefaults
 
 #set keyboard
-setxkbmap se
+setxkbmap se svdvorak -option ctrl:nocaps
 
 # Load external screen if any
 if xrandr | grep "^DP1-1 connected" ; then
