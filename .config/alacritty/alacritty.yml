@@ -15,7 +15,7 @@ font:
   italic:
     family: DejaVu Sans Mono
 
-  size: 6
+  size: 8
 
 window:
     padding:

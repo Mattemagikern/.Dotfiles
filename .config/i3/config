@@ -151,5 +151,5 @@ gaps outer 0
 new_window normal
 hide_edge_borders vertical
 
-exec compton -b
-exec_always feh --bg-scale ~/Pictures/Pencil.png
+exec picom -b
+exec_always feh --bg-scale ~/Pictures/stuff.jpg

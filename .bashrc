@@ -24,7 +24,7 @@ export EDITOR=nvim
 export PATH=$PATH:/usr/local/go/bin/
 export GOPATH=$HOME/go
 export PATH=$PATH:$(go env GOPATH)/bin/
-export PATH=$PATH:$HOME/.local/bin/
+export PATH=$PATH:$HOME/.local/bin/:/opt/JLink_Linux_V680c_x86_64
 
 source ~/.aliases
 
