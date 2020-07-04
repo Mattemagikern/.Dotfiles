@@ -1,7 +1,8 @@
 red="$(tput setaf 1)"
 green="$(tput setaf 2)"
 yellow="$(tput setaf 3)"
-blue="$(tput setaf 4)" purple="$(tput setaf 5)"
+blue="$(tput setaf 4)" 
+purple="$(tput setaf 5)"
 cyan="$(tput setaf 6)"
 white="$(tput setaf 7)"
 
@@ -11,7 +12,12 @@ reset="$(tput sgr0)"
 
 parse_git_branch() {
      local branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
-	 [[ -z "$branch" ]] || echo -e "(\001${cyan}${bold}\002${branch}\001${reset}\002)"
+     local status=$(git status -s 2>/dev/null)
+     local color=$cyan
+    
+     [ ${#status} -ne 0 ] && color=$yellow
+
+	 [[ -z "$branch" ]] || echo -e " [\001${color}${bold}\002${branch}\001${reset}\002]"
 }
 
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
@@ -39,7 +45,7 @@ __prompt_command() {
 
     local BRed='\[\e[0;91m\]'
     local RCol='\[\e[0m\]'
-PS1='[\001${cyan}${bold}\002\w\001${reset}\002]\[${reset}\]$(parse_git_branch)' 
+PS1='\001${cyan}${bold}\002\w\001${reset}\002\[${reset}\]$(parse_git_branch)' 
 
     if [ "$curr_exit" != 0 ]; then
 		PS1="$PS1(${BRed}$curr_exit${RCol})"
