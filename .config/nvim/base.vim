@@ -39,9 +39,6 @@ set nolist
 
 set clipboard=unnamedplus
 set autoread
-"colo default
-set background=dark
-colorscheme PaperColor
 
 autocmd BufRead,BufNewFile *.h set filetype=h syntax=c
 autocmd BufWritePre *.c,*.h,*.md,*.config,*.txt,*.yml,*.sh,*.rst %s/\s\+$//e
