@@ -61,8 +61,6 @@ let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}
 set background=light
 colo PaperColor
 
-
-
 " fzf
 let g:fzf_nvim_statusline = 0
 let $FZF_DEFAULT_COMMAND = 'rg --files'

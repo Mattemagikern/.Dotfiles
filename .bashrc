@@ -54,4 +54,3 @@ export PATH=$PATH:$HOME/.local/bin/:/opt/JLink_Linux_V680c_x86_64
 export HISTFILESIZE=10000
 export HISTSIZE=10000
 shopt -s histappend
-

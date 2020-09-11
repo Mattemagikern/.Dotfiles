@@ -22,9 +22,9 @@ set undodir=~/.nvimundo/
 set ignorecase
 set showmatch
 
-set tabstop=4
-set shiftwidth=4
-set expandtab
+
+set tabstop=8
+set shiftwidth=8
 
 set hidden
 
@@ -48,5 +48,5 @@ set guicursor=
 au BufWinEnter *.c,*.h let w:m1=matchadd('Search', '\%<82v.\%>81v', -1)
 au BufWinEnter *.c,*.h let w:m2=matchadd('ErrorMsg', '\%>81v.\+', -1)
 
-au BufRead,BufNewFile *.h,*.c set tabstop=8 shiftwidth=8 expandtab
+"au BufRead,BufNewFile *.h,*.c set tabstop=8 shiftwidth=8 expandtab
 au BufRead,BufNewFile *.yml,*.yaml set tabstop=4 shiftwidth=4 expandtab
