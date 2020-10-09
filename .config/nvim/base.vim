@@ -41,12 +41,12 @@ set clipboard=unnamedplus
 set autoread
 
 autocmd BufRead,BufNewFile *.h set filetype=h syntax=c
-autocmd BufWritePre *.c,*.h,*.md,*.config,*.txt,*.yml,*.sh,*.rst %s/\s\+$//e
+autocmd BufWritePre *.c,*.h,*.md,*.config,*.txt,*.yml,*.sh,*.rst,Kconfig* %s/\s\+$//e
 set guicursor=
 
 
-au BufWinEnter *.c,*.h let w:m1=matchadd('Search', '\%<82v.\%>81v', -1)
-au BufWinEnter *.c,*.h let w:m2=matchadd('ErrorMsg', '\%>81v.\+', -1)
+"au BufWinEnter *.c let w:m1=matchadd('Search', '\%<82v.\%>81v', -1)
+"au BufWinEnter *.c,*.h let w:m2=matchadd('ErrorMsg', '\%>81v.\+', -1)
 
 "au BufRead,BufNewFile *.h,*.c set tabstop=8 shiftwidth=8 expandtab
 au BufRead,BufNewFile *.yml,*.yaml set tabstop=4 shiftwidth=4 expandtab
