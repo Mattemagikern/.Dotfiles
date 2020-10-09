@@ -19,8 +19,8 @@ font:
 
 window:
     padding:
-        x: 5
-        y: 5
+        x: 2
+        y: 2
 
 background_opacity: 0.7
 cursor:

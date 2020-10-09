@@ -6,12 +6,11 @@ Plug 'NLKNguyen/papercolor-theme'
 
 Plug 'tpope/vim-fugitive'
 
-"Plug 'vimwiki/vimwiki'
 Plug 'godlygeek/tabular'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 
@@ -55,14 +54,9 @@ let s:white = "FFFFFF"
 let s:rspec_red = 'FE405F'
 let s:git_orange = 'F54D27'
 
-
-let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
-
-set background=light
+set background=dark
 colo PaperColor
 
 " fzf
 let g:fzf_nvim_statusline = 0
-let $FZF_DEFAULT_COMMAND = 'rg --files'
-nnoremap <silent> <C-f> :Files<CR>
-nnoremap <silent> <C-p> :Buffers<CR>
+let $FZF_DEFAULT_COMMAND = 'rg --files --no-ignore'
