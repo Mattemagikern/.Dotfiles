@@ -35,3 +35,5 @@ nnoremap <leader>w :e ~/wiki/index.rst <CR>
 set wildchar=<Tab> wildmenu wildmode=full
 noremap e<space> :e 
 nnoremap <C-n> :bnext<CR>
+
+nnoremap db :bd<CR>

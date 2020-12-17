@@ -47,10 +47,11 @@ __prompt_command() {
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 export EDITOR=nvim
-export PATH=$PATH:/usr/local/go/bin/
+export PATH=$PATH:/usr/local/go/bin/:/opt/SEGGER/JLink/
 export GOPATH=$HOME/go
 export PATH=$PATH:$(go env GOPATH)/bin/
 export PATH=$PATH:$HOME/.local/bin/:/opt/JLink_Linux_V680c_x86_64
 export HISTFILESIZE=10000
 export HISTSIZE=10000
 shopt -s histappend
+export TERM=xterm

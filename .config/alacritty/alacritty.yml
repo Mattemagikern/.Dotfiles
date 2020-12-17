@@ -15,49 +15,109 @@ font:
   italic:
     family: DejaVu Sans Mono
 
-  size: 8
+  size: 6
 
 window:
     padding:
         x: 2
         y: 2
 
-background_opacity: 0.7
+background_opacity: 0.95
 cursor:
     style: Underline
 
+    #colors:
+    #  # Default colors
+    #  primary:
+    #    background: '0x000000'
+    #    foreground: '0xffffff'
+    #  cursor:
+    #    text: '0xF81CE5'
+    #    cursor: '0xFF8300'
+    #
+    #  # Cursor colors
+    #  cursor:
+    #    text: '0xFF261E'
+    #    cursor: '0xFF261E'
+    #
+    #  # Normal colors
+    #  normal:
+    #    black:   '0x0d0d0d'
+    #    red:     '0xFF301B'
+    #    green:   '0xA0E521'
+    #    yellow:  '0xFFC620'
+    #    blue:    '0x1BA6FA'
+    #    magenta: '0x8763B8'
+    #    cyan:    '0x21DEEF'
+    #    white:   '0xEBEBEB'
+    #
+    #  # Bright colors
+    #  bright:
+    #    black:   '0x6D7070'
+    #    red:     '0xFF4352'
+    #    green:   '0xB8E466'
+    #    yellow:  '0xFFD750'
+    #    blue:    '0x1BA6FA'
+    #    magenta: '0xA578EA'
+    #    cyan:    '0x73FBF1'
+    #    white:   '0xFEFEF8'
+
+# Copyright (c) 2017-present Arctic Ice Studio <development@arcticicestudio.com>
+# Copyright (c) 2017-present Sven Greb <code@svengreb.de>
+
+# Project:    Nord Alacritty
+# Version:    0.1.0
+# Repository: https://github.com/arcticicestudio/nord-alacritty
+# License:    MIT
+# References:
+#   https://github.com/alacritty/alacritty
+
 colors:
-  # Default colors
   primary:
-    background: '0x000000'
-    foreground: '0xffffff'
+    background: '#2e3440'
+    foreground: '#d8dee9'
+    dim_foreground: '#a5abb6'
   cursor:
-    text: '0xF81CE5'
-    cursor: '0xFF8300'
-
-  # Cursor colors
-  cursor:
-    text: '0xFF261E'
-    cursor: '0xFF261E'
-
-  # Normal colors
+    text: '#2e3440'
+    cursor: '#d8dee9'
+  vi_mode_cursor:
+    text: '#2e3440'
+    cursor: '#d8dee9'
+  selection:
+    text: CellForeground
+    background: '#4c566a'
+  search:
+    matches:
+      foreground: CellBackground
+      background: '#88c0d0'
+    bar:
+      background: '#434c5e'
+      foreground: '#d8dee9'
   normal:
-    black:   '0x0d0d0d'
-    red:     '0xFF301B'
-    green:   '0xA0E521'
-    yellow:  '0xFFC620'
-    blue:    '0x1BA6FA'
-    magenta: '0x8763B8'
-    cyan:    '0x21DEEF'
-    white:   '0xEBEBEB'
-
-  # Bright colors
+    black: '#3b4252'
+    red: '#bf616a'
+    green: '#a3be8c'
+    yellow: '#ebcb8b'
+    blue: '#81a1c1'
+    magenta: '#b48ead'
+    cyan: '#88c0d0'
+    white: '#e5e9f0'
   bright:
-    black:   '0x6D7070'
-    red:     '0xFF4352'
-    green:   '0xB8E466'
-    yellow:  '0xFFD750'
-    blue:    '0x1BA6FA'
-    magenta: '0xA578EA'
-    cyan:    '0x73FBF1'
-    white:   '0xFEFEF8'
+    black: '#4c566a'
+    red: '#bf616a'
+    green: '#a3be8c'
+    yellow: '#ebcb8b'
+    blue: '#81a1c1'
+    magenta: '#b48ead'
+    cyan: '#8fbcbb'
+    white: '#eceff4'
+  dim:
+    black: '#373e4d'
+    red: '#94545d'
+    green: '#809575'
+    yellow: '#b29e75'
+    blue: '#68809a'
+    magenta: '#8c738c'
+    cyan: '#6d96a5'
+    white: '#aeb3bb'
+
