@@ -7,6 +7,8 @@
 config_version: 2
 settings:
   content.geolocation:
+    https://www.google.com: true
     https://www.vaningen.se: false
   content.register_protocol_handler:
     https://calendar.google.com?cid=%25s: false
+    https://mail.google.com?extsrc=mailto&url=%25s: true

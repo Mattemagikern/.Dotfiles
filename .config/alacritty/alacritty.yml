@@ -15,14 +15,14 @@ font:
   italic:
     family: DejaVu Sans Mono
 
-  size: 6
+  size: 10
 
 window:
     padding:
         x: 2
         y: 2
 
-background_opacity: 0.95
+window.opacity: 0.95
 cursor:
     style: Underline
 

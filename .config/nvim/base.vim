@@ -39,6 +39,7 @@ set nolist
 
 set clipboard=unnamedplus
 set autoread
+set number
 
 autocmd BufRead,BufNewFile *.h set filetype=h syntax=c
 autocmd BufWritePre *.c,*.h,*.md,*.config,*.txt,*.yml,*.sh,*.rst,Kconfig*,*.py %s/\s\+$//e

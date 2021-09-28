@@ -43,7 +43,7 @@ lightup (){
 }
 
 comms(){
-    sudo screen /dev/tty$1 115200
+    sudo picocom /dev/tty$1 -b115200
 }
 
 battery(){

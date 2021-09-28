@@ -18,6 +18,7 @@ System requirements
    alacritty
    feh
    picom
+   i3-gaps
    i3lock
    i3status
    nvim
