@@ -156,4 +156,4 @@ new_window normal
 hide_edge_borders vertical
 
 exec picom -b
-exec_always feh --bg-scale ~/Wallpapers/snow_woods.jpg
+exec_always feh --bg-scale ~/Wallpapers/swirls.jpg
