@@ -1,5 +1,5 @@
 [user]
-        email = Mans.Ansgariusson@AssaAbloy.com
+        email = Mansgariusson@gmail.com
         name = Måns Ansgariusson
 [push]
         default = simple
@@ -38,3 +38,5 @@
         whitespace = red reverse
 [core]
         page = nvim -R
+[init]
+	defaultBranch = master
