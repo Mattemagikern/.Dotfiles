@@ -155,5 +155,16 @@ gaps outer 0
 new_window normal
 hide_edge_borders vertical
 
+#opacity
 exec picom -b
-exec_always feh --bg-scale ~/Wallpapers/swirls.jpg
+# wallpaper 
+exec_always feh --bg-scale ~/Wallpapers/lanister.jpg
+# Workspace 2
+workspace 1 output HDMI-0
+workspace 2 output DP-2
+
+exec --no-startup-id i3-msg 'workspace 1; append_layout ~/.config/i3/workspace1.json'
+exec --no-startup-id i3-msg 'workspace 1; exec alacritty; exec alacritty; exec alacritty'
+
+exec --no-startup-id i3-msg 'workspace 2; append_layout ~/.config/i3/workspace2.json' 
+exec --no-startup-id i3-msg 'workspace 2; exec qutebrowser; exec discord'

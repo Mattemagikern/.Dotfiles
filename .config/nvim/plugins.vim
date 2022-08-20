@@ -3,6 +3,8 @@ Plug 'scrooloose/nerdtree'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/neosnippet'
 Plug 'NLKNguyen/papercolor-theme'
+Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
+Plug 'connorholyday/vim-snazzy'
 
 Plug 'tpope/vim-fugitive'
 
@@ -12,6 +14,7 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'junegunn/vim-easy-align'
 
 
 Plug 'haya14busa/vim-keeppad'
@@ -57,10 +60,14 @@ let NERDTreeShowHidden=1
 
 "set background=dark
 "colo PaperColor
-let g:nord_cursor_line_number_background = 1
-let g:nord_uniform_diff_background = 1
-let g:nord_underline = 1
-colo nord
+
+"let g:nord_cursor_line_number_background = 1
+"let g:nord_uniform_diff_background = 1
+"let g:nord_underline = 1
+"colo nord
+
+"colorscheme challenger_deep
+colorscheme snazzy
 
 " fzf
 let g:fzf_nvim_statusline = 0

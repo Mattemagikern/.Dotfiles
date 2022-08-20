@@ -6,9 +6,26 @@
 
 config_version: 2
 settings:
+  backend:
+    global: webengine
   content.geolocation:
+    https://www.elgiganten.se: false
     https://www.google.com: true
     https://www.vaningen.se: false
+  content.headers.user_agent:
+    https://accounts.google.com/*: Mozilla/5.0 ({os_info}; rv:90.0) Gecko/20100101
+      Firefox/90.0
+  content.media.audio_capture:
+    https://teams.microsoft.com: true
+  content.notifications:
+    https://0.theironnews.site: false
+    https://calendar.google.com: true
+    https://devzone.nordicsemi.com: false
+    https://www.facebook.com: false
+    https://www.netflix.com: false
+    https://www.youtube.com: true
   content.register_protocol_handler:
     https://calendar.google.com?cid=%25s: false
     https://mail.google.com?extsrc=mailto&url=%25s: true
+    https://outlook.office.com?mailtouri=%25s: true
+    https://outlook.office365.com?mailtouri=%25s: true

@@ -1,7 +1,7 @@
 "keybindings"
 nnoremap nt :NERDTree<CR>
 nnoremap , :nohl<CR>
-nmap gb :Gblame<CR>
+nmap gb :Git blame<CR>
 imap hh <Esc>
 "fast save and exit"
 map <C-x> :w<CR>
@@ -17,7 +17,7 @@ tnoremap hh <C-\><C-N>
 
 "autocmd BufRead,BufNewFile *.c,*.h set equalprg=astyle\ --mode=c
 
-autocmd BufRead *.c,*.h,*.py,*.go set tw=80
+autocmd BufRead *.c,*.h,*.py,*.go set tw=110
 
 au! BufRead,BufNewFile *.tex,*.md,*.rst,*COMMIT_EDITMSG set spell
 "au! BufWritePre *.tex if &modified | call jobstart('make') | endif

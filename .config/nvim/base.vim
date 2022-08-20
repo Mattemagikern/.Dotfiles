@@ -39,10 +39,13 @@ set nolist
 
 set clipboard=unnamedplus
 set autoread
-set number
+
+set nonumber
+set numberwidth=4
+set textwidth=110
 
 autocmd BufRead,BufNewFile *.h set filetype=h syntax=c
-autocmd BufWritePre *.c,*.h,*.md,*.config,*.txt,*.yml,*.sh,*.rst,Kconfig*,*.py %s/\s\+$//e
+autocmd BufWritePre *.c,*.h,*.md,*.config,*.txt,*.yml,*.sh,*.rst,Kconfig*,*.py,*.overlay,*.dts %s/\s\+$//e
 set guicursor=
 
 
@@ -52,3 +55,25 @@ set guicursor=
 "au BufRead,BufNewFile *.h,*.c set tabstop=8 shiftwidth=8 expandtab
 au BufRead,BufNewFile *.yml,*.yaml set tabstop=4 shiftwidth=4 expandtab
 au BufRead,BufNewFile *.gitdiff set ft=diff
+
+function ShowSpaces(...)
+  let @/='\v(\s+$)|( +\ze\t)'
+  let oldhlsearch=&hlsearch
+  if !a:0
+    let &hlsearch=!&hlsearch
+  else
+    let &hlsearch=a:1
+  end
+  return oldhlsearch
+endfunction
+
+function TrimSpaces() range
+  let oldhlsearch=ShowSpaces(1)
+  execute a:firstline.",".a:lastline."substitute ///gec"
+  let &hlsearch=oldhlsearch
+endfunction
+
+command -bar -nargs=? ShowSpaces call ShowSpaces(<args>)
+command -bar -nargs=0 -range=% TrimSpaces <line1>,<line2>call TrimSpaces()
+
+autocmd BufWritePre *.c,*.h call TrimSpaces()
