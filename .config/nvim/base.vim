@@ -5,7 +5,7 @@ set encoding=UTF-8
 set nonumber                   " Disable line numbers
 set backspace=indent,eol,start " Allow backspace in Insert mode
 set autoread                   " Reload files changed outside vim
-set laststatus=0               " Never show status line
+set laststatus=2               " Never show status line
 set splitright                 " Opens vertical split right of current window
 set splitbelow                 " Opens horizontal split below current window
 
@@ -77,3 +77,7 @@ command -bar -nargs=? ShowSpaces call ShowSpaces(<args>)
 command -bar -nargs=0 -range=% TrimSpaces <line1>,<line2>call TrimSpaces()
 
 autocmd BufWritePre *.c,*.h call TrimSpaces()
+
+set statusline=
+set statusline+=[%4*\ %<%F%*\] "full path
+set statusline+=%=[line:%l,\ column:%v] 

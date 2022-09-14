@@ -5,19 +5,22 @@ nmap gb :Git blame<CR>
 imap hh <Esc>
 "fast save and exit"
 map <C-x> :w<CR>
-map <C-a> :q<CR>
+"map <C-a> :q<CR>
 "quick serch, amazing for moving around in text files"
 let mapleader="\<Space>"
 nnoremap <silent> <C-space> :BLines<CR>
 nnoremap <silent> <C-f> :Files<CR>
 nnoremap <silent> <C-b> :Buffers<CR>
 
+nnoremap <silent> <C-a> :buffer term<TAB><CR>
+
 "terminal"
-tnoremap hh <C-\><C-N>
+tnoremap hh <Esc>
+tnoremap <C-a> <C-\><C-N>
 
 "autocmd BufRead,BufNewFile *.c,*.h set equalprg=astyle\ --mode=c
 
-autocmd BufRead *.c,*.h,*.py,*.go set tw=110
+autocmd BufRead *.c,*.h,*.py,*.go set tw=80
 
 au! BufRead,BufNewFile *.tex,*.md,*.rst,*COMMIT_EDITMSG set spell
 "au! BufWritePre *.tex if &modified | call jobstart('make') | endif

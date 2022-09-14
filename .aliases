@@ -16,10 +16,14 @@ alias gd='git diff'
 alias switch='git checkout'
 
 alias grep='grep --color=auto'
-alias vi="nvim"
+alias vi=run_nvim 
 alias vim="nvim"
 
 alias cfg='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+
+run_nvim (){
+	nvim $1 -c term  -c "buffer $1"
+}
 
 chroot (){
     sudo systemd-nspawn -bD $1 -E TERM=xterm --bind-ro=/dev/random --bind-ro=/dev/urandom
