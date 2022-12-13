@@ -22,7 +22,7 @@ alias vim="nvim"
 alias cfg='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 run_nvim (){
-	nvim $1 -c term  -c "buffer $1"
+	nvim "$@" -c term  -c "buffer $1"
 }
 
 chroot (){
