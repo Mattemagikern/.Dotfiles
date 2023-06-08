@@ -9,7 +9,7 @@ Plug 'connorholyday/vim-snazzy'
 Plug 'tpope/vim-fugitive'
 
 Plug 'godlygeek/tabular'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+"Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -26,15 +26,7 @@ call plug#end()
 
 let g:python3_host_prog = '/bin/python3'
 
-call remote#host#RegisterPlugin('python3', '~/.config/nvim/plugged/deoplete.nvim/rplugin/python3/deoplete/deoplete.py', [
-			\ {'sync': 1, 'name': 'DeopleteInitializePython', 'type': 'command', 'opts': {}},
-			\ ])
-call deoplete#enable()
-
-let g:neosnippet#snippets_directory="~/.config/nvim/snippets"
-let g:neosnippet#disable_runtime_snippets = { "_": 1, }
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
-imap <C-u> <Plug>(neosnippet_expand_or_jump)
 
 let g:NERDTreeWinPos = "right"
 let NERDTreeShowHidden=1
@@ -66,9 +58,16 @@ let NERDTreeShowHidden=1
 "let g:nord_underline = 1
 "colo nord
 
-"colorscheme challenger_deep
 colorscheme snazzy
+colorscheme challenger_deep
 
 " fzf
 let g:fzf_nvim_statusline = 0
 let $FZF_DEFAULT_COMMAND = 'rg --files --no-ignore'
+
+nnoremap <C-f> :FZF<CR>
+let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-i': 'split',
+  \ 'ctrl-v': 'vsplit' }
+

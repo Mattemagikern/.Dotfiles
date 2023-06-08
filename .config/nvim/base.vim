@@ -15,7 +15,6 @@ set smarttab
 set linebreak
 
 set smartcase "Awesome! "
-set foldmethod=marker
 
 set undofile
 set undodir=~/.nvimundo/
@@ -45,7 +44,7 @@ set numberwidth=4
 set textwidth=110
 
 autocmd BufRead,BufNewFile *.h set filetype=h syntax=c
-autocmd BufWritePre *.c,*.h,*.md,*.config,*.txt,*.yml,*.sh,*.rst,Kconfig*,*.py,*.overlay,*.dts %s/\s\+$//e
+autocmd BufWritePre *.c,*.h,*.md,*.config,*.txt,*.yml,*.sh,*.rst,Kconfig*,*.py,*.overlay,*.dts,*.puml %s/\s\+$//e
 set guicursor=
 
 
@@ -81,3 +80,6 @@ autocmd BufWritePre *.c,*.h call TrimSpaces()
 set statusline=
 set statusline+=[%4*\ %<%F%*\] "full path
 set statusline+=%=[line:%l,\ column:%v] 
+set nofoldenable
+set foldlevelstart=99
+set foldlevel=99

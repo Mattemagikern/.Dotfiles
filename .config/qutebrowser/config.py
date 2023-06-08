@@ -7,13 +7,10 @@
 ## Remove it to not load settings done via the GUI.
 config.load_autoconfig()
 
-#chromium backend 
-c.backend = 'webengine'
-
 #searchengine
 c.url.searchengines = {'DEFAULT': "https://www.google.com/search?q={}"}
 
-# overload open 
+# overload open
 config.bind('o', 'set-cmd-text -s :open -t')
 
 #editor
