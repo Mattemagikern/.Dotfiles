@@ -73,3 +73,4 @@ if [ "$?" == 2 ]; then
 	fi
 fi
 exec 2>&3
+export PATH=$PATH:/opt/JLink

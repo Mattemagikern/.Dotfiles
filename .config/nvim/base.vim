@@ -15,6 +15,10 @@ set smarttab
 set linebreak
 
 set smartcase "Awesome! "
+set foldmethod=marker
+set foldmarker={{{,}}}  " Default for fdm=marker
+set foldnestmax=3
+set nofoldenable
 
 set undofile
 set undodir=~/.nvimundo/
@@ -54,28 +58,6 @@ set guicursor=
 "au BufRead,BufNewFile *.h,*.c set tabstop=8 shiftwidth=8 expandtab
 au BufRead,BufNewFile *.yml,*.yaml set tabstop=4 shiftwidth=4 expandtab
 au BufRead,BufNewFile *.gitdiff set ft=diff
-
-function ShowSpaces(...)
-  let @/='\v(\s+$)|( +\ze\t)'
-  let oldhlsearch=&hlsearch
-  if !a:0
-    let &hlsearch=!&hlsearch
-  else
-    let &hlsearch=a:1
-  end
-  return oldhlsearch
-endfunction
-
-function TrimSpaces() range
-  let oldhlsearch=ShowSpaces(1)
-  execute a:firstline.",".a:lastline."substitute ///gec"
-  let &hlsearch=oldhlsearch
-endfunction
-
-command -bar -nargs=? ShowSpaces call ShowSpaces(<args>)
-command -bar -nargs=0 -range=% TrimSpaces <line1>,<line2>call TrimSpaces()
-
-autocmd BufWritePre *.c,*.h call TrimSpaces()
 
 set statusline=
 set statusline+=[%4*\ %<%F%*\] "full path
