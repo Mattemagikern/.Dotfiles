@@ -51,8 +51,25 @@ lazy.setup({
 			},
 			render_on_write = true,
 		},
-	}
+	},
+	{
+		"nvim-treesitter/nvim-treesitter",
+		build = ":TSUpdate",
+		config = function ()
+			local configs = require("nvim-treesitter.configs")
 
+			configs.setup({
+				ensure_installed = "all",
+				sync_install = false,
+				auto_install = true,
+				highlight = {
+					enable = true,
+					additional_vim_regex_highlighting = false,
+				},
+				indent = { enable = true },
+			})
+		end
+	}
 })
 
 require('telescope').setup {
@@ -110,8 +127,8 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 })
 
 vim.filetype.add({
-        extension = {
-          jenkins = 'perl',
-  }
+	extension = {
+		jenkins = 'perl',
+	}
 })
 
